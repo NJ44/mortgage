@@ -31,11 +31,13 @@ export const MenuItem = ({
           transition={transition}
         >
           {active === item && (
-            <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
+            <div className="absolute top-[calc(100%_+_0.5rem)] left-1/2 transform -translate-x-1/2">
+              {/* Invisible buffer zone to prevent dropdown from closing */}
+              <div className="h-8 w-full absolute -top-8 left-0"></div>
               <motion.div
                 transition={transition}
                 layoutId="active"
-                className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+                className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl pt-6"
               >
                 <motion.div
                   layout
@@ -60,7 +62,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className={`relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-black shadow-2xl flex justify-between items-center space-x-3 px-6 py-2 ${className || ''}`}
+      className={`relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-black shadow-2xl flex justify-between items-center space-x-3 px-6 py-1.5 max-w-5xl mx-auto ${className || ''}`}
     >
       {children}
     </nav>
@@ -85,16 +87,16 @@ export const ProductItem = ({
     <a href={href} onClick={handleClick} className="flex space-x-2">
       <img
         src={src}
-        width={140}
-        height={70}
+        width={100}
+        height={60}
         alt={title}
-        className="flex-shrink-0 rounded-md shadow-2xl object-cover"
+        className="flex-shrink-0 rounded-md shadow-2xl object-cover w-20 h-12"
       />
       <div>
-        <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
+        <h4 className="text-sm font-bold mb-0.5 text-black dark:text-white">
           {title}
         </h4>
-        <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
+        <p className="text-neutral-700 text-xs max-w-[8rem] dark:text-neutral-300">
           {description}
         </p>
       </div>

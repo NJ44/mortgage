@@ -107,8 +107,8 @@ const LeadForm = () => {
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-2xl p-4 md:p-6">
-      <h2 className="text-lg font-bold text-gray-800 mb-3">Request an Appointment</h2>
+    <div className="bg-white rounded-2xl shadow-2xl p-3 md:p-4 max-w-md mx-auto">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">Request an Appointment</h2>
       
       {submitStatus === 'success' ? (
         <div className="text-center py-8">
@@ -127,7 +127,7 @@ const LeadForm = () => {
           </button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-3">
+        <form onSubmit={handleSubmit} className="space-y-2.5">
           <div>
             <label htmlFor="name" className="block text-xs font-medium text-gray-700 mb-1">
               Full name
@@ -138,7 +138,7 @@ const LeadForm = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-3 py-2 text-sm border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${
+              className={`w-full px-2.5 py-1.5 text-xs border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${
                 errors.name ? 'border-red-500' : 'border-gray-300'
               }`}
               aria-invalid={errors.name ? 'true' : 'false'}
@@ -161,7 +161,7 @@ const LeadForm = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`w-full px-3 py-2 text-sm border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${
+              className={`w-full px-2.5 py-1.5 text-xs border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${
                 errors.email ? 'border-red-500' : 'border-gray-300'
               }`}
               aria-invalid={errors.email ? 'true' : 'false'}
@@ -184,7 +184,7 @@ const LeadForm = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className={`w-full px-3 py-2 text-sm border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${
+              className={`w-full px-2.5 py-1.5 text-xs border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${
                 errors.phone ? 'border-red-500' : 'border-gray-300'
               }`}
               aria-invalid={errors.phone ? 'true' : 'false'}
@@ -207,7 +207,7 @@ const LeadForm = () => {
               name="preferredTime"
               value={formData.preferredTime}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+              className="w-full px-2.5 py-1.5 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
             />
           </div>
 
@@ -220,8 +220,8 @@ const LeadForm = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              rows={3}
-              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+              rows={2}
+              className="w-full px-2.5 py-1.5 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
             />
           </div>
 
@@ -234,7 +234,7 @@ const LeadForm = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-primary text-white py-2 rounded-lg font-semibold text-sm hover:bg-opacity-90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-primary text-white py-1.5 rounded-lg font-semibold text-xs hover:bg-opacity-90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? 'Submitting...' : 'Request appointment'}
           </button>

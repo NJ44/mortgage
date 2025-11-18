@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { cn } from "../lib/utils";
 import { config } from "../config";
@@ -6,6 +7,7 @@ import { config } from "../config";
 function NavBar({ className }) {
   const [active, setActive] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,23 +18,32 @@ function NavBar({ className }) {
   }, []);
 
   const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setActive(null);
+    if (href.startsWith('#')) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        setActive(null);
+      }
     }
+  };
+
+  const handleLinkClick = (path) => {
+    navigate(path);
+    setActive(null);
+    // Scroll to top when navigating to a new page
+    window.scrollTo(0, 0);
   };
 
   return (
     <div
       className={cn(
-        "fixed top-4 inset-x-0 max-w-7xl mx-auto z-50 px-4",
+        "fixed top-4 inset-x-0 z-50 px-4",
         className
       )}
     >
       <Menu setActive={setActive} className="w-full">
         {/* Logo - positioned on the left */}
-        <div className="flex items-center">
+        <Link to="/" className="flex items-center">
           {config.LOGO_URL && !config.LOGO_URL.startsWith("{{") ? (
             <img
               src={config.LOGO_URL}
@@ -44,36 +55,54 @@ function NavBar({ className }) {
               {config.BUSINESS_NAME}
             </span>
           )}
-        </div>
+        </Link>
 
         {/* Menu items - positioned in the center */}
         <div className="flex items-center space-x-4">
           <MenuItem setActive={setActive} active={active} item="Services">
-            <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink
-                href="#services"
-                onClick={() => scrollToSection("#services")}
-              >
-                General Dentistry
-              </HoveredLink>
-              <HoveredLink
-                href="#services"
-                onClick={() => scrollToSection("#services")}
-              >
-                Cosmetic & Whitening
-              </HoveredLink>
-              <HoveredLink
-                href="#services"
-                onClick={() => scrollToSection("#services")}
-              >
-                Dental Implants
-              </HoveredLink>
-              <HoveredLink
-                href="#services"
-                onClick={() => scrollToSection("#services")}
-              >
-                Emergency Care
-              </HoveredLink>
+            <div className="text-sm grid grid-cols-2 gap-6 p-4">
+              <ProductItem
+                title="General Dentistry"
+                href="/general-dentistry"
+                src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=200&h=120&fit=crop"
+                description="Comprehensive dental care for the whole family"
+                onClick={() => handleLinkClick("/general-dentistry")}
+              />
+              <ProductItem
+                title="Cosmetic & Whitening"
+                href="/cosmetic-whitening"
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=200&h=120&fit=crop"
+                description="Transform your smile with professional treatments"
+                onClick={() => handleLinkClick("/cosmetic-whitening")}
+              />
+              <ProductItem
+                title="Specialized Care"
+                href="/specialized-care"
+                src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=200&h=120&fit=crop"
+                description="Advanced treatments and specialized services"
+                onClick={() => handleLinkClick("/specialized-care")}
+              />
+              <ProductItem
+                title="Dental Implants"
+                href="/specialized-care"
+                src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=200&h=120&fit=crop"
+                description="Permanent solution for missing teeth"
+                onClick={() => handleLinkClick("/specialized-care")}
+              />
+              <ProductItem
+                title="Emergency Care"
+                href="/specialized-care"
+                src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=200&h=120&fit=crop"
+                description="Same-day emergency appointments available"
+                onClick={() => handleLinkClick("/specialized-care")}
+              />
+              <ProductItem
+                title="Orthodontics"
+                href="/specialized-care"
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=200&h=120&fit=crop"
+                description="Straighten teeth with modern options"
+                onClick={() => handleLinkClick("/specialized-care")}
+              />
             </div>
           </MenuItem>
 
