@@ -107,8 +107,8 @@ const LeadForm = () => {
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">Request an Appointment</h2>
+    <div className="bg-white rounded-2xl shadow-2xl p-4 md:p-6">
+      <h2 className="text-lg font-bold text-gray-800 mb-3">Request an Appointment</h2>
       
       {submitStatus === 'success' ? (
         <div className="text-center py-8">
@@ -117,8 +117,8 @@ const LeadForm = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">Thanks — we got your request.</h3>
-          <p className="text-gray-600">Expect an email in 24 hours.</p>
+          <h3 className="text-base font-semibold text-gray-800 mb-2">Thanks — we got your request.</h3>
+          <p className="text-sm text-gray-600">Expect an email in 24 hours.</p>
           <button
             onClick={() => setSubmitStatus(null)}
             className="mt-4 text-primary hover:underline"
@@ -127,9 +127,9 @@ const LeadForm = () => {
           </button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-3">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="name" className="block text-xs font-medium text-gray-700 mb-1">
               Full name
             </label>
             <input
@@ -138,21 +138,21 @@ const LeadForm = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${
+              className={`w-full px-3 py-2 text-sm border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${
                 errors.name ? 'border-red-500' : 'border-gray-300'
               }`}
               aria-invalid={errors.name ? 'true' : 'false'}
               aria-describedby={errors.name ? 'name-error' : undefined}
             />
             {errors.name && (
-              <p id="name-error" className="mt-1 text-sm text-red-600" role="alert">
+              <p id="name-error" className="mt-1 text-xs text-red-600" role="alert">
                 {errors.name}
               </p>
             )}
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="email" className="block text-xs font-medium text-gray-700 mb-1">
               What's your email?
             </label>
             <input
@@ -161,21 +161,21 @@ const LeadForm = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${
+              className={`w-full px-3 py-2 text-sm border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${
                 errors.email ? 'border-red-500' : 'border-gray-300'
               }`}
               aria-invalid={errors.email ? 'true' : 'false'}
               aria-describedby={errors.email ? 'email-error' : undefined}
             />
             {errors.email && (
-              <p id="email-error" className="mt-1 text-sm text-red-600" role="alert">
+              <p id="email-error" className="mt-1 text-xs text-red-600" role="alert">
                 {errors.email}
               </p>
             )}
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="phone" className="block text-xs font-medium text-gray-700 mb-1">
               Phone
             </label>
             <input
@@ -184,21 +184,21 @@ const LeadForm = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${
+              className={`w-full px-3 py-2 text-sm border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${
                 errors.phone ? 'border-red-500' : 'border-gray-300'
               }`}
               aria-invalid={errors.phone ? 'true' : 'false'}
               aria-describedby={errors.phone ? 'phone-error' : undefined}
             />
             {errors.phone && (
-              <p id="phone-error" className="mt-1 text-sm text-red-600" role="alert">
+              <p id="phone-error" className="mt-1 text-xs text-red-600" role="alert">
                 {errors.phone}
               </p>
             )}
           </div>
 
           <div>
-            <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="preferredTime" className="block text-xs font-medium text-gray-700 mb-1">
               Preferred appointment (optional)
             </label>
             <input
@@ -207,12 +207,12 @@ const LeadForm = () => {
               name="preferredTime"
               value={formData.preferredTime}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
             />
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="message" className="block text-xs font-medium text-gray-700 mb-1">
               Message (optional)
             </label>
             <textarea
@@ -221,7 +221,7 @@ const LeadForm = () => {
               value={formData.message}
               onChange={handleChange}
               rows={3}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+              className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
             />
           </div>
 
@@ -234,7 +234,7 @@ const LeadForm = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-primary text-white py-2 rounded-lg font-semibold text-sm hover:bg-opacity-90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? 'Submitting...' : 'Request appointment'}
           </button>

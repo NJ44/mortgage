@@ -1,177 +1,159 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { config } from '../config'
+import React, { useState, useEffect } from "react";
+import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
+import { cn } from "../lib/utils";
+import { config } from "../config";
 
-const NavBar = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const menuRef = useRef(null)
-  const firstFocusableRef = useRef(null)
-  const lastFocusableRef = useRef(null)
+function NavBar({ className }) {
+  const [active, setActive] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  // Focus trap for mobile menu
-  useEffect(() => {
-    if (!isMobileMenuOpen) return
-
-    const handleKeyDown = (e) => {
-      if (e.key === 'Tab') {
-        if (e.shiftKey) {
-          if (document.activeElement === firstFocusableRef.current) {
-            e.preventDefault()
-            lastFocusableRef.current?.focus()
-          }
-        } else {
-          if (document.activeElement === lastFocusableRef.current) {
-            e.preventDefault()
-            firstFocusableRef.current?.focus()
-          }
-        }
-      }
-      if (e.key === 'Escape') {
-        setIsMobileMenuOpen(false)
-      }
-    }
-
-    document.addEventListener('keydown', handleKeyDown)
-    firstFocusableRef.current?.focus()
-
-    return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [isMobileMenuOpen])
-
-  const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'Services', href: '#services' },
-    { label: 'Reviews', href: '#reviews' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Contact', href: '#contact' },
-  ]
+      setIsScrolled(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToSection = (href) => {
-    const element = document.querySelector(href)
+    const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-      setIsMobileMenuOpen(false)
+      element.scrollIntoView({ behavior: "smooth" });
+      setActive(null);
     }
-  }
+  };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white shadow-md py-3'
-          : 'bg-transparent py-4'
-      }`}
-      role="navigation"
-      aria-label="Main navigation"
+    <div
+      className={cn(
+        "fixed top-4 inset-x-0 max-w-7xl mx-auto z-50 px-4",
+        className
+      )}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
-        {/* Logo */}
+      <Menu setActive={setActive} className="w-full">
+        {/* Logo - positioned on the left */}
         <div className="flex items-center">
-          {config.LOGO_URL && !config.LOGO_URL.startsWith('{{') ? (
+          {config.LOGO_URL && !config.LOGO_URL.startsWith("{{") ? (
             <img
               src={config.LOGO_URL}
               alt={`${config.BUSINESS_NAME} logo`}
-              className="h-10 w-auto"
+              className="h-8 w-auto"
             />
           ) : (
-            <span className={`text-2xl font-bold ${isScrolled ? 'text-primary' : 'text-white'}`}>
+            <span className="text-base font-bold text-white">
               {config.BUSINESS_NAME}
             </span>
           )}
         </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={(e) => {
-                e.preventDefault()
-                scrollToSection(link.href)
-              }}
-              className={`font-medium transition-colors ${
-                isScrolled ? 'text-gray-700 hover:text-primary' : 'text-white hover:text-accent'
-              }`}
-            >
-              {link.label}
-            </a>
-          ))}
+        {/* Menu items - positioned in the center */}
+        <div className="flex items-center space-x-4">
+          <MenuItem setActive={setActive} active={active} item="Services">
+            <div className="flex flex-col space-y-4 text-sm">
+              <HoveredLink
+                href="#services"
+                onClick={() => scrollToSection("#services")}
+              >
+                General Dentistry
+              </HoveredLink>
+              <HoveredLink
+                href="#services"
+                onClick={() => scrollToSection("#services")}
+              >
+                Cosmetic & Whitening
+              </HoveredLink>
+              <HoveredLink
+                href="#services"
+                onClick={() => scrollToSection("#services")}
+              >
+                Dental Implants
+              </HoveredLink>
+              <HoveredLink
+                href="#services"
+                onClick={() => scrollToSection("#services")}
+              >
+                Emergency Care
+              </HoveredLink>
+            </div>
+          </MenuItem>
+
+          <MenuItem setActive={setActive} active={active} item="About">
+            <div className="text-sm grid grid-cols-2 gap-10 p-4">
+              <ProductItem
+                title="Our Practice"
+                href="#home"
+                src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=280&h=140&fit=crop"
+                description="Modern dental care with a friendly, professional team"
+                onClick={() => scrollToSection("#home")}
+              />
+              <ProductItem
+                title="Patient Reviews"
+                href="#reviews"
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=280&h=140&fit=crop"
+                description="See what our patients say about their experience"
+                onClick={() => scrollToSection("#reviews")}
+              />
+              <ProductItem
+                title="Location"
+                href="#contact"
+                src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=280&h=140&fit=crop"
+                description="Visit us at our convenient location in the city"
+                onClick={() => scrollToSection("#contact")}
+              />
+              <ProductItem
+                title="FAQ"
+                href="#faq"
+                src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=280&h=140&fit=crop"
+                description="Common questions about our services and policies"
+                onClick={() => scrollToSection("#faq")}
+              />
+            </div>
+          </MenuItem>
+
+          <MenuItem setActive={setActive} active={active} item="Contact">
+            <div className="flex flex-col space-y-4 text-sm">
+              <HoveredLink
+                href="#contact"
+                onClick={() => scrollToSection("#contact")}
+              >
+                Book Appointment
+              </HoveredLink>
+              <HoveredLink
+                href={`tel:${config.PHONE}`}
+              >
+                Call Us: {config.PHONE}
+              </HoveredLink>
+              <HoveredLink
+                href={`mailto:${config.EMAIL}`}
+              >
+                Email: {config.EMAIL}
+              </HoveredLink>
+              <HoveredLink
+                href="#contact"
+                onClick={() => scrollToSection("#contact")}
+              >
+                Visit Our Office
+              </HoveredLink>
+            </div>
+          </MenuItem>
+        </div>
+
+        {/* Book Now Button - positioned on the right */}
+        <div className="flex items-center">
           <a
             href="#contact"
             onClick={(e) => {
-              e.preventDefault()
-              scrollToSection('#contact')
+              e.preventDefault();
+              scrollToSection("#contact");
             }}
-            className="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-colors"
+            className="bg-primary text-white px-4 py-1.5 rounded-full font-semibold hover:bg-opacity-90 transition-colors whitespace-nowrap text-sm"
           >
             Book Now
           </a>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          ref={firstFocusableRef}
-          className="md:hidden p-2"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-expanded={isMobileMenuOpen}
-          aria-controls="mobile-menu"
-          aria-label="Toggle mobile menu"
-        >
-          <span className={`block w-6 h-0.5 bg-current transition-all ${isScrolled ? 'text-gray-700' : 'text-white'} ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-          <span className={`block w-6 h-0.5 bg-current mt-1.5 transition-all ${isScrolled ? 'text-gray-700' : 'text-white'} ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`block w-6 h-0.5 bg-current mt-1.5 transition-all ${isScrolled ? 'text-gray-700' : 'text-white'} ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div
-          id="mobile-menu"
-          ref={menuRef}
-          className="md:hidden bg-white shadow-lg"
-          role="menu"
-        >
-          <div className="container mx-auto px-4 py-4 space-y-4">
-            {navLinks.map((link, index) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => {
-                  e.preventDefault()
-                  scrollToSection(link.href)
-                }}
-                className="block text-gray-700 font-medium hover:text-primary py-2"
-                role="menuitem"
-                ref={index === navLinks.length - 1 ? lastFocusableRef : null}
-              >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault()
-                scrollToSection('#contact')
-              }}
-              className="block bg-primary text-white px-6 py-3 rounded-full font-semibold text-center hover:bg-opacity-90"
-              role="menuitem"
-            >
-              Book Now
-            </a>
-          </div>
-        </div>
-      )}
-    </nav>
-  )
+      </Menu>
+    </div>
+  );
 }
 
-export default NavBar
-
+export default NavBar;

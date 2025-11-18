@@ -1,6 +1,6 @@
 // CLIENT VARIABLES - Replace these with actual values
 export const config = {
-  BUSINESS_NAME: "{{BUSINESS_NAME}}",
+  BUSINESS_NAME: "Dental Care",
   TAGLINE: "{{TAGLINE}}", // e.g., "Gentle dental care near you"
   PRIMARY_COLOR: "{{PRIMARY_COLOR}}", // hex color, e.g., "#0066CC"
   ACCENT_COLOR: "{{ACCENT_COLOR}}", // hex color, e.g., "#FF6B6B"

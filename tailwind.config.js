@@ -9,6 +9,10 @@ module.exports = {
       colors: {
         primary: 'var(--primary-color)',
         accent: 'var(--accent-color)',
+        background: '#ffffff',
+      },
+      boxShadow: {
+        'input': '0 2px 10px rgba(0, 0, 0, 0.1)',
       },
     },
   },
