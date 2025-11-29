@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { config } from '../config'
+import { useTranslation } from '../hooks/useTranslation'
 
 const LeadForm = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -34,19 +36,19 @@ const LeadForm = () => {
     const newErrors = {}
 
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required'
+      newErrors.name = t.form.nameRequired
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required'
+      newErrors.email = t.form.emailRequired
     } else if (!validateEmail(formData.email)) {
-      newErrors.email = 'Please enter a valid email'
+      newErrors.email = t.form.emailInvalid
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone = 'Phone is required'
+      newErrors.phone = t.form.phoneRequired
     } else if (!validatePhone(formData.phone)) {
-      newErrors.phone = 'Please enter a valid phone number'
+      newErrors.phone = t.form.phoneInvalid
     }
 
     setErrors(newErrors)
@@ -108,7 +110,7 @@ const LeadForm = () => {
 
   return (
     <div id="appointment-form" className="bg-white rounded-2xl shadow-2xl p-3 md:p-4 max-w-sm mx-auto">
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">Get a Free Quote</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">{t.form.getFreeQuote}</h2>
       
       {submitStatus === 'success' ? (
         <div className="text-center py-8">
@@ -117,20 +119,20 @@ const LeadForm = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h3 className="text-base font-semibold text-gray-800 mb-2">Thanks — we got your request.</h3>
-          <p className="text-sm text-gray-600">Expect an email in 24 hours.</p>
+          <h3 className="text-base font-semibold text-gray-800 mb-2">{t.form.successTitle}</h3>
+          <p className="text-sm text-gray-600">{t.form.successMessage}</p>
           <button
             onClick={() => setSubmitStatus(null)}
             className="mt-4 text-primary hover:underline"
           >
-            Submit another request
+            {t.form.submitAnother}
           </button>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-2.5">
           <div>
             <label htmlFor="name" className="block text-xs font-medium text-gray-700 mb-1">
-              Full name
+              {t.form.fullName}
             </label>
             <input
               type="text"
@@ -153,7 +155,7 @@ const LeadForm = () => {
 
           <div>
             <label htmlFor="email" className="block text-xs font-medium text-gray-700 mb-1">
-              What's your email?
+              {t.form.email}
             </label>
             <input
               type="email"
@@ -176,7 +178,7 @@ const LeadForm = () => {
 
           <div>
             <label htmlFor="phone" className="block text-xs font-medium text-gray-700 mb-1">
-              Phone
+              {t.form.phone}
             </label>
             <input
               type="tel"
@@ -199,7 +201,7 @@ const LeadForm = () => {
 
           <div>
             <label htmlFor="preferredTime" className="block text-xs font-medium text-gray-700 mb-1">
-              Preferred appointment (optional)
+              {t.form.preferredTime}
             </label>
             <input
               type="datetime-local"
@@ -213,7 +215,7 @@ const LeadForm = () => {
 
           <div>
             <label htmlFor="message" className="block text-xs font-medium text-gray-700 mb-1">
-              Message (optional)
+              {t.form.message}
             </label>
             <textarea
               id="message"
@@ -227,7 +229,7 @@ const LeadForm = () => {
 
           {submitStatus === 'error' && (
             <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg" role="alert">
-              Something went wrong. Please try again or call us directly.
+              {t.form.error}
             </div>
           )}
 
@@ -236,7 +238,7 @@ const LeadForm = () => {
             disabled={isSubmitting}
             className="w-full bg-primary text-white py-3 rounded-lg font-semibold text-sm hover:bg-opacity-90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {isSubmitting ? 'Submitting...' : 'Request appointment'}
+            {isSubmitting ? t.form.submitting : t.form.submit}
           </button>
         </form>
       )}

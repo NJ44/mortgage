@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { config, sampleReviews } from '../config'
+import ReviewModal from './ReviewModal'
+import CommentModal from './CommentModal'
 
 const Reviews = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false)
+  const [isCommentModalOpen, setIsCommentModalOpen] = useState(false)
+  const [selectedRating, setSelectedRating] = useState(0)
   const reviews = config.GOOGLE_REVIEWS_DATA || sampleReviews
 
   // Auto-advance (disabled by default, can be enabled)
@@ -121,35 +126,76 @@ const Reviews = () => {
           </div>
 
           {/* CTA */}
-          <div className="text-center mt-8">
+          <div className="text-center mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             {config.GOOGLE_BUSINESS_PROFILE_URL && !config.GOOGLE_BUSINESS_PROFILE_URL.startsWith('{{') ? (
-              <a
-                href={config.GOOGLE_BUSINESS_PROFILE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-primary hover:underline font-semibold"
-              >
-                Read more reviews
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
+              <>
+                <a
+                  href={config.GOOGLE_BUSINESS_PROFILE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-primary hover:underline font-semibold"
+                >
+                  Read more reviews
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+                <button
+                  onClick={() => setIsReviewModalOpen(true)}
+                  className="inline-flex items-center bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                >
+                  Write a Review
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                  </svg>
+                </button>
+              </>
             ) : (
-              <a
-                href={`https://www.google.com/search?q=${encodeURIComponent(config.BUSINESS_NAME + ' ' + config.CITY)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-primary hover:underline font-semibold"
-              >
-                Read more reviews
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
+              <>
+                <a
+                  href={`https://www.google.com/search?q=${encodeURIComponent(config.BUSINESS_NAME + ' ' + config.CITY)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-primary hover:underline font-semibold"
+                >
+                  Read more reviews
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+                <button
+                  onClick={() => setIsReviewModalOpen(true)}
+                  className="inline-flex items-center bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                >
+                  Write a Review
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                  </svg>
+                </button>
+              </>
             )}
           </div>
         </div>
       </div>
+
+      <ReviewModal
+        isOpen={isReviewModalOpen}
+        onClose={() => setIsReviewModalOpen(false)}
+        onLowRating={(rating) => {
+          setSelectedRating(rating);
+          setIsReviewModalOpen(false);
+          setIsCommentModalOpen(true);
+        }}
+      />
+
+      <CommentModal
+        isOpen={isCommentModalOpen}
+        onClose={() => {
+          setIsCommentModalOpen(false);
+          setSelectedRating(0);
+        }}
+        rating={selectedRating}
+      />
     </section>
   )
 }

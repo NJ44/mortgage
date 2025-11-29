@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Menu as MenuIcon, X } from "lucide-react";
+import { Menu as MenuIcon, X, Languages, ChevronDown } from "lucide-react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { scrollToElement } from "../hooks/useLenis";
 import { cn } from "../lib/utils";
 import { config } from "../config";
+import { useLanguage } from "../contexts/LanguageContext";
+import { useTranslation } from "../hooks/useTranslation";
 
 function NavBar({ className }) {
   const [active, setActive] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const navigate = useNavigate();
+  const { language, setLanguage } = useLanguage();
+  const { t } = useTranslation();
+  const languageDropdownRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +25,23 @@ function NavBar({ className }) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close language dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (languageDropdownRef.current && !languageDropdownRef.current.contains(event.target)) {
+        setIsLanguageDropdownOpen(false);
+      }
+    };
+
+    if (isLanguageDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isLanguageDropdownOpen]);
 
   const scrollToSection = (href) => {
     if (href.startsWith('#')) {
@@ -66,7 +89,7 @@ function NavBar({ className }) {
 
         {/* Desktop Menu items - hidden on mobile */}
         <div className="hidden md:flex items-center space-x-6">
-          <MenuItem setActive={setActive} active={active} item="Locations">
+          <MenuItem setActive={setActive} active={active} item={t.nav.locations}>
             <div className="text-sm grid grid-cols-2 gap-6 p-4">
               {config.LOCATIONS && config.LOCATIONS.length > 0 ? (
                 config.LOCATIONS.map((location, index) => (
@@ -85,7 +108,7 @@ function NavBar({ className }) {
             </div>
           </MenuItem>
 
-          <MenuItem setActive={setActive} active={active} item="Services">
+          <MenuItem setActive={setActive} active={active} item={t.nav.services}>
             <div className="text-sm grid grid-cols-2 gap-6 p-4">
               <ProductItem
                 title="General Dentistry"
@@ -132,7 +155,7 @@ function NavBar({ className }) {
             </div>
           </MenuItem>
 
-          <MenuItem setActive={setActive} active={active} item="About Us">
+          <MenuItem setActive={setActive} active={active} item={t.nav.aboutUs}>
             <div className="text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
                 title="Our Practice"
@@ -173,23 +196,61 @@ function NavBar({ className }) {
             }}
             className="cursor-pointer text-black hover:text-primary font-medium text-sm transition-colors duration-200"
           >
-            Contact
+            {t.nav.contact}
           </a>
-
-          <Link
-            to="/blog"
-            className="text-black hover:text-primary font-medium text-sm transition-colors duration-200"
-            onClick={() => {
-              setActive(null);
-              handleLinkClick("/blog");
-            }}
-          >
-            Blog
-          </Link>
         </div>
 
-        {/* Desktop Book Now Button - hidden on mobile */}
-        <div className="hidden md:flex items-center ml-auto" style={{ transform: 'translateX(20px)' }}>
+        {/* Desktop Language Switcher and Book Now Button - hidden on mobile */}
+        <div className="hidden md:flex items-center ml-auto gap-3" style={{ transform: 'translateX(20px)' }}>
+          <div 
+            ref={languageDropdownRef}
+            className="relative"
+            onMouseEnter={() => setIsLanguageDropdownOpen(true)}
+            onMouseLeave={() => setIsLanguageDropdownOpen(false)}
+          >
+            <button
+              className="flex items-center gap-2 px-3 py-1.5 rounded-lg font-medium text-sm text-black hover:bg-gray-100 transition-colors"
+              aria-label="Language selector"
+            >
+              <Languages className="w-4 h-4" />
+              <span>{language === 'en' ? 'English' : 'Español'}</span>
+              <ChevronDown className="w-4 h-4" />
+            </button>
+            {isLanguageDropdownOpen && (
+              <div 
+                className="absolute top-full right-0 pt-1 bg-transparent"
+                onMouseEnter={() => setIsLanguageDropdownOpen(true)}
+                onMouseLeave={() => setIsLanguageDropdownOpen(false)}
+              >
+                <div className="bg-white rounded-lg shadow-lg border border-gray-200 min-w-[120px] z-50">
+                  <button
+                    onClick={() => {
+                      setLanguage('en');
+                      setIsLanguageDropdownOpen(false);
+                    }}
+                    className={cn(
+                      "w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors first:rounded-t-lg last:rounded-b-lg",
+                      language === 'en' && "bg-gray-50 font-semibold"
+                    )}
+                  >
+                    English
+                  </button>
+                  <button
+                    onClick={() => {
+                      setLanguage('es');
+                      setIsLanguageDropdownOpen(false);
+                    }}
+                    className={cn(
+                      "w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors first:rounded-t-lg last:rounded-b-lg",
+                      language === 'es' && "bg-gray-50 font-semibold"
+                    )}
+                  >
+                    Español
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
           <a
             href="#appointment-form"
             onClick={(e) => {
@@ -202,7 +263,7 @@ function NavBar({ className }) {
             }}
             className="bg-primary text-white px-4 py-1.5 rounded-lg font-semibold hover:bg-opacity-90 transition-colors whitespace-nowrap text-sm"
           >
-            Book Now
+            {t.nav.bookNow}
           </a>
         </div>
 
@@ -229,7 +290,7 @@ function NavBar({ className }) {
           <div className="px-4 py-6 space-y-4">
             {/* Services Section */}
             <div>
-              <h3 className="text-lg font-semibold text-black mb-3">Services</h3>
+              <h3 className="text-lg font-semibold text-black mb-3">{t.nav.services}</h3>
               <div className="space-y-2">
                 <a
                   href="/general-dentistry"
@@ -266,7 +327,7 @@ function NavBar({ className }) {
 
             {/* About Section */}
             <div>
-              <h3 className="text-lg font-semibold text-black mb-3">About Us</h3>
+              <h3 className="text-lg font-semibold text-black mb-3">{t.nav.aboutUs}</h3>
               <div className="space-y-2">
                 <a
                   href="#home"
@@ -313,7 +374,7 @@ function NavBar({ className }) {
 
             {/* Locations Section */}
             <div>
-              <h3 className="text-lg font-semibold text-black mb-3">Locations</h3>
+              <h3 className="text-lg font-semibold text-black mb-3">{t.nav.locations}</h3>
               <div className="space-y-2">
                 {config.LOCATIONS && config.LOCATIONS.length > 0 ? (
                   config.LOCATIONS.map((location, index) => (
@@ -337,7 +398,7 @@ function NavBar({ className }) {
 
             {/* Contact Section */}
             <div>
-              <h3 className="text-lg font-semibold text-black mb-3">Contact</h3>
+              <h3 className="text-lg font-semibold text-black mb-3">{t.nav.contact}</h3>
               <div className="space-y-2">
                 <a
                   href="/contact"
@@ -352,18 +413,36 @@ function NavBar({ className }) {
               </div>
             </div>
 
-            {/* Blog Section */}
-            <div>
-              <a
-                href="/blog"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleMobileLinkClick(() => handleLinkClick("/blog"));
-                }}
-                className="block py-2 text-lg font-semibold text-black hover:text-primary transition-colors"
-              >
-                Blog
-              </a>
+            {/* Mobile Language Switcher */}
+            <div className="pt-2">
+              <div className="space-y-2">
+                <button
+                  onClick={() => {
+                    setLanguage('en');
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={cn(
+                    "flex items-center gap-2 w-full px-4 py-3 rounded-lg font-medium text-black hover:bg-gray-100 transition-colors border",
+                    language === 'en' ? "border-primary bg-primary/5" : "border-gray-200"
+                  )}
+                >
+                  <Languages className="w-5 h-5" />
+                  <span>{t.nav.english}</span>
+                </button>
+                <button
+                  onClick={() => {
+                    setLanguage('es');
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={cn(
+                    "flex items-center gap-2 w-full px-4 py-3 rounded-lg font-medium text-black hover:bg-gray-100 transition-colors border",
+                    language === 'es' ? "border-primary bg-primary/5" : "border-gray-200"
+                  )}
+                >
+                  <Languages className="w-5 h-5" />
+                  <span>{t.nav.spanish}</span>
+                </button>
+              </div>
             </div>
 
             {/* Mobile Book Now Button */}
@@ -382,7 +461,7 @@ function NavBar({ className }) {
                 }}
                 className="block w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-opacity-90 transition-colors"
               >
-                Book Now
+                {t.nav.bookNow}
               </a>
             </div>
           </div>
