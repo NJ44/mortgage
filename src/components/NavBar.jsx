@@ -431,7 +431,7 @@ function NavBar({ className }) {
                   onClick={() => {
                     setLanguage('es');
                     setIsMobileMenuOpen(false);
-                  }}
+                }}
                   className={cn(
                     "flex items-center gap-2 w-full px-4 py-3 rounded-lg font-medium text-black hover:bg-gray-100 transition-colors border",
                     language === 'es' ? "border-primary bg-primary/5" : "border-gray-200"
