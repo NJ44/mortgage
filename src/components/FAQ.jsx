@@ -4,33 +4,33 @@ import { motion } from 'framer-motion'
 const faqs = [
   {
     id: 1,
-    question: 'Do you accept my insurance?',
-    answer: 'We accept most major insurance plans and are in-network with many providers. Please call us with your insurance information, and we can verify your coverage and benefits before your appointment.',
+    question: 'Do you offer free consultations?',
+    answer: 'Yes, we offer free initial consultations for all new clients. During this consultation, we will discuss your case, answer your questions, and explain how we can help. Please call us to schedule your free consultation.',
   },
   {
     id: 2,
-    question: 'What are your hours?',
-    answer: 'Our office is open Monday through Friday from 8:00 AM to 6:00 PM, and Saturday from 9:00 AM to 2:00 PM. We are closed on Sundays. Emergency appointments may be available outside these hours.',
+    question: 'What are your office hours?',
+    answer: 'Our office is open Monday through Friday from 9:00 AM to 6:00 PM, and Saturday from 10:00 AM to 2:00 PM. We are closed on Sundays. Emergency consultations may be available outside these hours for urgent legal matters.',
   },
   {
     id: 3,
-    question: 'How do I book emergency care?',
-    answer: 'For dental emergencies, please call our office immediately. We reserve same-day emergency slots for urgent situations. If it\'s after hours, leave a message and we\'ll get back to you as soon as possible.',
+    question: 'How quickly can you help with an urgent legal matter?',
+    answer: 'For urgent legal matters, please call our office immediately. We understand that legal issues often require immediate attention, and we make every effort to respond to urgent matters as quickly as possible. We offer same-day consultations for emergencies when possible.',
   },
   {
     id: 4,
-    question: 'Do you accept new patients?',
-    answer: 'Yes! We welcome new patients and are currently accepting appointments. You can request an appointment online or call us directly to schedule your first visit.',
+    question: 'Do you handle cases outside of your local area?',
+    answer: 'Yes, we handle cases throughout the state and can work with clients regardless of their location. We also have relationships with attorneys in other states for matters that require out-of-state representation. Please contact us to discuss your specific situation.',
   },
   {
     id: 5,
-    question: 'What should I bring to my first appointment?',
-    answer: 'Please bring a valid ID, your insurance card (if applicable), a list of current medications, and any previous dental records or X-rays if you have them. Arrive 15 minutes early to complete new patient paperwork.',
+    question: 'What should I bring to my first consultation?',
+    answer: 'Please bring any relevant documents related to your case, such as contracts, correspondence, court documents, police reports, or medical records. Also bring a valid ID and any information about the other parties involved. If you\'re unsure what to bring, our staff can guide you when you schedule your appointment.',
   },
   {
     id: 6,
-    question: 'Do you offer payment plans?',
-    answer: 'Yes, we offer flexible payment plans for treatments that aren\'t covered by insurance. We also accept cash, credit cards, and CareCredit financing. Please discuss payment options with our office staff.',
+    question: 'How do you charge for legal services?',
+    answer: 'Our fee structure varies depending on the type of case. We offer hourly billing, flat fees, and contingency fee arrangements (where applicable, such as personal injury cases). During your free consultation, we will discuss our fee structure and payment options in detail.',
   },
 ]
 
@@ -94,6 +94,7 @@ const FAQ = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+          <p className="text-gray-600">Get answers to common questions about our legal services</p>
         </motion.div>
 
         <motion.div 

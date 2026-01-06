@@ -12,7 +12,7 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-white pt-20"
       style={{
-        backgroundImage: 'url(https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1920&q=80)',
+        backgroundImage: 'url(https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
@@ -25,10 +25,10 @@ const Hero = () => {
           {/* Left Column - Text Content */}
           <div className="text-black space-y-4 animate-fade-in">
             <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-black">
-              Your Local Dentist for Healthy, Confident Smiles
+              Experienced Legal Representation for Your Rights
             </h1>
             <h2 className="text-lg md:text-xl lg:text-2xl text-black font-normal">
-              Modern care, gentle treatments, and a team that puts you first.
+              Proven results, dedicated advocacy, and a team that fights for you.
             </h2>
 
             {/* CTAs */}

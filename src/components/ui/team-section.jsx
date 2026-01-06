@@ -3,21 +3,21 @@ import { Link } from 'react-router-dom'
 
 const members = [
     {
-        name: 'Dr. Sarah Johnson',
-        role: 'Lead Dentist - DDS',
-        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop',
+        name: 'Sarah Johnson',
+        role: 'Senior Partner - Business Law',
+        avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=faces',
         link: '#',
     },
     {
-        name: 'Dr. Michael Chen',
-        role: 'Orthodontist - DDS',
-        avatar: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop',
+        name: 'Michael Chen',
+        role: 'Partner - Criminal Defense',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=faces',
         link: '#',
     },
     {
-        name: 'Dr. James Wilson',
-        role: 'Oral Surgeon - DDS',
-        avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop',
+        name: 'James Wilson',
+        role: 'Partner - Personal Injury',
+        avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=faces',
         link: '#',
     },
 ]
@@ -28,10 +28,10 @@ export default function TeamSection() {
             <div className="mx-auto max-w-5xl px-6">
                 <div className="mt-12 gap-4 sm:grid sm:grid-cols-2 md:mt-24">
                     <div className="sm:w-2/5">
-                        <h2 className="text-4xl font-bold">Our dream team</h2>
+                        <h2 className="text-4xl font-bold">Our legal team</h2>
                     </div>
                     <div className="mt-6 sm:mt-0">
-                        <p>During the working process, we perform regular fitting with the client because he is the only person who can feel whether a new suit fits or not.</p>
+                        <p>Our experienced attorneys bring decades of combined legal expertise to every case, ensuring you receive the highest quality representation and strategic counsel.</p>
                     </div>
                 </div>
                 <div className="mt-12 md:mt-24">

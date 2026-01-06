@@ -8,74 +8,74 @@ import CommentModal from "./CommentModal";
 // Testimonials data with Unsplash images (Google Reviews style)
 const testimonials = [
   {
-    text: "Excellent service! The team made me feel comfortable and the cleaning was thorough. Highly recommend!",
+    text: "Excellent legal representation! The team was professional, responsive, and helped me win my case. Highly recommend!",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces",
     name: "Sarah Johnson",
-    role: "Patient",
+    role: "Client",
     rating: 5,
     date: "2 weeks ago",
   },
   {
-    text: "Best dentist I've been to. Modern equipment, friendly staff, and they accept my insurance. Very satisfied.",
+    text: "Best law firm I've worked with. They explained everything clearly, kept me informed throughout the process, and achieved great results.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces",
     name: "Michael Chen",
-    role: "Patient",
+    role: "Client",
     rating: 5,
     date: "1 month ago",
   },
   {
-    text: "Emergency appointment was available same day. Professional and caring. Thank you for the quick help!",
+    text: "Emergency consultation was available same day. Professional and caring. Thank you for the quick help during a difficult time!",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=faces",
     name: "Emily Rodriguez",
-    role: "Patient",
+    role: "Client",
     rating: 5,
     date: "3 weeks ago",
   },
   {
-    text: "Great experience from start to finish. The office is clean, staff is welcoming, and the dentist explained everything clearly.",
+    text: "Great experience from start to finish. The attorneys are knowledgeable, the staff is welcoming, and they explained everything clearly.",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=faces",
     name: "David Thompson",
-    role: "Patient",
+    role: "Client",
     rating: 5,
     date: "1 month ago",
   },
   {
-    text: "The whitening treatment exceeded my expectations. My smile looks amazing and the process was painless!",
+    text: "The personal injury case exceeded my expectations. They fought hard for me and secured a settlement I never thought possible!",
     image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces",
     name: "Jessica Martinez",
-    role: "Patient",
+    role: "Client",
     rating: 5,
     date: "2 months ago",
   },
   {
-    text: "I was nervous about getting a root canal, but the team made me feel at ease. The procedure was smooth and recovery was quick.",
+    text: "I was facing serious criminal charges, but the team made me feel at ease. They built a strong defense and got the charges reduced significantly.",
     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=faces",
     name: "Amanda Wilson",
-    role: "Patient",
+    role: "Client",
     rating: 5,
     date: "3 weeks ago",
   },
   {
-    text: "The cosmetic dentistry work I had done looks natural and beautiful. I couldn't be happier with the results!",
+    text: "The business law services I received were exceptional. They helped me navigate complex contracts and protected my interests perfectly.",
     image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=faces",
     name: "Rachel Brown",
-    role: "Patient",
+    role: "Client",
     rating: 5,
     date: "1 month ago",
   },
   {
-    text: "Professional, friendly, and efficient. They got me in quickly for my dental emergency and fixed the issue perfectly.",
+    text: "Professional, friendly, and efficient. They got me in quickly for my urgent legal matter and resolved the issue perfectly.",
     image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=faces",
     name: "James Anderson",
-    role: "Patient",
+    role: "Client",
     rating: 5,
     date: "2 weeks ago",
   },
   {
-    text: "My dental implants look and feel amazing. The entire process was well explained and the care was exceptional.",
+    text: "My estate planning was handled with exceptional care. The entire process was well explained and the documents were thorough.",
     image: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=100&h=100&fit=crop&crop=faces",
     name: "Lisa Garcia",
-    role: "Patient",
+    role: "Client",
     rating: 5,
     date: "2 months ago",
   },
@@ -106,7 +106,7 @@ const Testimonials = () => {
             </div>
           </div>
           <h2 className="text-4xl font-bold tracking-tighter mt-5 text-center">
-            What our patients say
+            What our clients say
           </h2>
         </motion.div>
         <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">

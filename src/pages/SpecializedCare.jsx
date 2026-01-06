@@ -16,8 +16,8 @@ const SpecializedCare = () => {
           transition={{ duration: 0.8 }}
         >
           <img
-            src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=1200&h=600&fit=crop"
-            alt="Specialized Care"
+            src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=600&fit=crop"
+            alt="Criminal Defense"
             className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-lg"
           />
         </motion.div>
@@ -29,7 +29,7 @@ const SpecializedCare = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Specialized Care
+          Criminal Defense
         </motion.h1>
 
         <motion.div 
@@ -40,27 +40,27 @@ const SpecializedCare = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <p className="mb-4">
-            At {config.BUSINESS_NAME}, we recognize that some dental conditions require specialized expertise and advanced treatment approaches. Our specialized care services encompass a comprehensive range of advanced dental procedures designed to address complex oral health issues and restore optimal function and aesthetics. From dental implants that replace missing teeth to emergency care that provides immediate relief, our team of skilled specialists is equipped with the latest technology and techniques to deliver exceptional results for even the most challenging cases.
+            Facing criminal charges is one of the most serious and stressful situations you can encounter. The consequences of a criminal conviction can be life-altering, affecting your freedom, your career, your relationships, and your future. At {config.BUSINESS_NAME}, our criminal defense practice provides aggressive, experienced representation for individuals facing criminal charges at both state and federal levels. From misdemeanors to serious felonies, our experienced criminal defense attorneys are equipped with extensive trial experience, in-depth knowledge of criminal law, and a proven track record of achieving favorable outcomes for our clients.
           </p>
 
           <p className="mb-4">
-            Dental implants represent one of the most significant advances in modern dentistry, offering a permanent solution for missing teeth that closely mimics the look, feel, and function of natural teeth. Unlike traditional bridges or dentures, implants are surgically placed into the jawbone, where they fuse with the bone tissue through a process called osseointegration. This creates a stable foundation for replacement teeth that can last a lifetime with proper care. Our implant specialists have extensive training and experience in implant placement, working closely with each patient to develop personalized treatment plans that consider their unique oral anatomy, bone density, and aesthetic goals. We use only the highest quality implant systems and work with skilled dental laboratories to create custom crowns, bridges, or dentures that perfectly match your natural teeth.
+            Our criminal defense practice encompasses a comprehensive range of services designed to protect your rights, freedom, and future. We understand that every criminal case is unique and requires a strategic, personalized approach. During your initial consultation, our attorneys will thoroughly review the charges against you, explain your rights, discuss potential defenses, and develop a comprehensive strategy to achieve the best possible outcome. We believe in aggressive advocacy and thorough case preparation, leaving no stone unturned in our defense of your rights.
           </p>
 
           <p className="mb-4">
-            Root canal therapy, often misunderstood as a painful procedure, is actually a highly effective treatment that saves infected or severely damaged teeth from extraction. Modern root canal techniques have made this procedure much more comfortable than in the past, and our endodontic specialists use advanced equipment and anesthesia to ensure your comfort throughout the process. During a root canal, we remove the infected or damaged pulp from inside the tooth, thoroughly clean and disinfect the root canals, and then seal them to prevent reinfection. This treatment allows you to keep your natural tooth, which is always preferable to extraction, as it maintains your jawbone health and prevents the need for more extensive replacement procedures.
+            We handle all types of criminal cases, including DUI/DWI offenses, drug crimes, assault and battery, theft and property crimes, white-collar crimes, violent crimes, sex crimes, domestic violence, weapons charges, and federal crimes. Our criminal defense attorneys have extensive experience in both state and federal courts, and we understand the different procedures, strategies, and challenges involved in each type of case. We work closely with investigators, expert witnesses, and other professionals to build strong defenses and challenge the prosecution's case at every opportunity.
           </p>
 
           <p className="mb-4">
-            Emergency dental care is available for patients experiencing sudden pain, trauma, or other urgent dental issues. We understand that dental emergencies can happen at any time, and we're committed to providing prompt, effective care when you need it most. Our emergency services include treatment for severe toothaches, knocked-out or broken teeth, lost fillings or crowns, abscesses, and other urgent conditions. We maintain flexible scheduling to accommodate emergency patients and work quickly to diagnose and treat the problem, providing immediate relief and preventing further complications. Our team is trained to handle a wide range of dental emergencies with compassion and efficiency, ensuring you receive the care you need when every minute counts.
+            The criminal justice system can be complex and intimidating, and the stakes are incredibly high. That's why it's essential to have experienced criminal defense representation from the moment you're charged or even before charges are filed. Early intervention can make a significant difference in the outcome of your case, as we can work to prevent charges from being filed, negotiate favorable plea agreements, or build a strong defense from the start. We understand the tactics prosecutors use and know how to effectively challenge evidence, question witnesses, and present compelling defenses on your behalf.
           </p>
 
           <p className="mb-4">
-            Orthodontic treatment has evolved significantly in recent years, and we offer both traditional braces and modern clear aligner systems to straighten teeth and correct bite issues. Whether you're a teenager or an adult seeking orthodontic treatment, our orthodontic specialists will evaluate your specific needs and recommend the most appropriate treatment option. Traditional metal braces remain highly effective for complex cases, while clear aligners offer a more discreet alternative for many patients. We also provide retainers and follow-up care to ensure your results are maintained long-term. Orthodontic treatment not only improves the appearance of your smile but also enhances oral function and makes teeth easier to clean, reducing your risk of cavities and gum disease.
+            We understand that being charged with a crime can be overwhelming and frightening. Our criminal defense attorneys provide compassionate support while aggressively fighting for your rights. We take the time to explain the legal process, answer your questions, and ensure you understand your options at every stage of your case. We believe in open communication and will keep you informed about developments in your case and what to expect next. Our goal is to minimize the impact of criminal charges on your life while working to achieve the best possible outcome.
           </p>
 
           <p className="mb-6">
-            Periodontal treatment addresses gum disease, a common condition that affects the tissues supporting your teeth. Left untreated, gum disease can lead to tooth loss and has been linked to other serious health conditions. Our periodontal specialists provide comprehensive gum disease treatment, from non-surgical deep cleanings to advanced surgical procedures when necessary. We work with patients to develop effective home care routines and provide ongoing maintenance to prevent disease recurrence. Our goal is to restore and maintain healthy gums that support your teeth for a lifetime. At {config.BUSINESS_NAME}, our specialized care services reflect our commitment to providing comprehensive, advanced dental treatment that addresses even the most complex oral health needs. Contact us to learn more about how our specialized services can help you achieve optimal oral health.
+            At {config.BUSINESS_NAME}, we believe that everyone deserves a strong defense, regardless of the charges they face. Our criminal defense attorneys combine extensive legal knowledge with aggressive advocacy and genuine care for our clients. We fight tirelessly to protect your rights, challenge the prosecution's case, and achieve favorable outcomes through negotiation or trial. If you or a loved one is facing criminal charges, don't wait—contact us immediately for a confidential consultation. The sooner we can begin working on your defense, the better positioned we'll be to protect your rights and achieve a favorable outcome.
           </p>
         </motion.div>
 
@@ -79,7 +79,7 @@ const SpecializedCare = () => {
             }}
             className="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors"
           >
-            Schedule a Consultation
+            Free Consultation
           </a>
         </motion.div>
 
@@ -98,7 +98,7 @@ const SpecializedCare = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Our Specialized Care Services
+            Our Criminal Defense Services
           </motion.h2>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Service 1 */}
@@ -110,14 +110,14 @@ const SpecializedCare = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&h=300&fit=crop"
-                alt="Dental Implants"
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=300&fit=crop"
+                alt="DUI/DWI Defense"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Dental Implants</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">DUI/DWI Defense</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Dental implants represent one of the most significant advances in modern dentistry, offering a permanent solution for missing teeth that closely mimics the look, feel, and function of natural teeth. Unlike traditional bridges or dentures, implants are surgically placed into the jawbone, where they fuse with the bone tissue through a process called osseointegration. This creates a stable foundation for replacement teeth that can last a lifetime with proper care. The implant process typically involves multiple stages, beginning with a comprehensive evaluation to assess your bone density and oral health. If needed, bone grafting may be performed to ensure adequate support for the implant. Once the implant is placed, a healing period allows the bone to integrate with the implant. After healing, an abutment is attached to the implant, and a custom crown, bridge, or denture is fabricated to complete the restoration. Our implant specialists have extensive training and experience in implant placement, working closely with each patient to develop personalized treatment plans. We use only the highest quality implant systems and work with skilled dental laboratories to create restorations that perfectly match your natural teeth. Dental implants not only restore your smile but also preserve jawbone health and prevent the shifting of adjacent teeth.
+                  DUI and DWI charges can have serious consequences, including license suspension, fines, jail time, and a permanent criminal record. Our attorneys have extensive experience defending clients against DUI/DWI charges and understand the complex laws and procedures involved in these cases. We challenge the prosecution's case by examining the validity of traffic stops, the accuracy of field sobriety tests, the reliability of breathalyzer and blood test results, and the procedures used by law enforcement. We work with expert witnesses including toxicologists and accident reconstruction specialists to build strong defenses. Our goal is to minimize the impact of DUI/DWI charges on your life, whether through dismissal of charges, reduction of charges, or negotiation of favorable plea agreements. We also help clients navigate the administrative process of license suspension and work to protect their driving privileges whenever possible.
                 </p>
                 <Link
                   to="/specialized-care/dental-implants"
@@ -137,14 +137,14 @@ const SpecializedCare = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&h=300&fit=crop"
-                alt="Emergency Care"
+                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=300&fit=crop"
+                alt="Drug Crimes"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Emergency Care</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Drug Crimes</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Dental emergencies can happen at any time, and we're committed to providing prompt, effective care when you need it most. Whether you're experiencing severe toothache, have knocked out or broken a tooth, lost a filling or crown, or have an abscess, our emergency dental services are designed to provide immediate relief and prevent further complications. We understand that dental emergencies can be painful and stressful, which is why we maintain flexible scheduling to accommodate urgent cases. Our team is trained to handle a wide range of dental emergencies with compassion and efficiency, ensuring you receive the care you need when every minute counts. Common dental emergencies we treat include severe toothaches, dental trauma, knocked-out teeth, broken or chipped teeth, lost fillings or crowns, abscesses, and other urgent conditions. When you call with a dental emergency, we'll assess your situation and provide guidance on immediate steps you can take before arriving at our office. We work quickly to diagnose and treat the problem, providing immediate relief and preventing further complications. Our goal is to get you out of pain as quickly as possible while preserving your oral health and preventing the need for more extensive treatment later.
+                  Drug crime charges can range from simple possession to serious trafficking offenses, and the penalties can be severe, including lengthy prison sentences and substantial fines. Our criminal defense attorneys have extensive experience defending clients against all types of drug charges, including possession, distribution, manufacturing, and trafficking. We understand the complex laws surrounding drug crimes and know how to challenge the prosecution's case effectively. We examine the legality of searches and seizures, challenge the chain of custody of evidence, question the reliability of drug testing, and explore alternative sentencing options including drug court and treatment programs. Our goal is to protect your rights, minimize the consequences of drug charges, and achieve the best possible outcome for your case. We work to have charges dismissed, reduced, or negotiate favorable plea agreements when appropriate, and we're prepared to take your case to trial when necessary to protect your rights and freedom.
                 </p>
                 <Link
                   to="/specialized-care/emergency-care"
@@ -164,14 +164,14 @@ const SpecializedCare = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=300&fit=crop"
-                alt="Orthodontics"
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=300&fit=crop"
+                alt="Assault and Violent Crimes"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Orthodontics</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Assault and Violent Crimes</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Orthodontic treatment has evolved significantly in recent years, and we offer both traditional braces and modern clear aligner systems to straighten teeth and correct bite issues. Whether you're a teenager or an adult seeking orthodontic treatment, our orthodontic specialists will evaluate your specific needs and recommend the most appropriate treatment option. Traditional metal braces remain highly effective for complex cases, providing precise control over tooth movement and the ability to address severe misalignments. Modern braces are smaller and more comfortable than ever before, and we offer ceramic braces that blend with your teeth for a more discreet appearance. Clear aligner systems offer a nearly invisible alternative for many patients, allowing you to straighten your teeth without the appearance of traditional braces. These custom-made, removable aligners gradually move your teeth into the desired position, and you can remove them for eating, brushing, and special occasions. Orthodontic treatment not only improves the appearance of your smile but also enhances oral function, makes teeth easier to clean, and reduces your risk of cavities and gum disease. We provide retainers and follow-up care to ensure your results are maintained long-term, helping you enjoy your beautiful, straight smile for years to come.
+                  Assault and violent crime charges are among the most serious criminal offenses, carrying severe penalties including lengthy prison sentences. Our criminal defense attorneys have extensive experience defending clients against assault, battery, domestic violence, robbery, and other violent crime charges. We understand that these cases often involve complex issues including self-defense, defense of others, mistaken identity, and false accusations. We conduct thorough investigations, work with expert witnesses, and build strong defenses that challenge the prosecution's case. Our goal is to protect your rights, minimize the consequences of violent crime charges, and achieve the best possible outcome. We work to have charges dismissed or reduced, negotiate favorable plea agreements when appropriate, and we're prepared to take your case to trial when necessary. We understand the serious nature of these charges and the impact they can have on your life, and we fight aggressively to protect your rights and freedom.
                 </p>
                 <Link
                   to="/specialized-care/orthodontics"
@@ -191,14 +191,14 @@ const SpecializedCare = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=600&h=300&fit=crop"
-                alt="Periodontal Treatment"
+                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=300&fit=crop"
+                alt="White-Collar Crimes"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Periodontal Treatment</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">White-Collar Crimes</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Periodontal treatment addresses gum disease, a common condition that affects the tissues supporting your teeth. Left untreated, gum disease can lead to tooth loss and has been linked to other serious health conditions including heart disease, diabetes, and respiratory problems. Our periodontal specialists provide comprehensive gum disease treatment, from non-surgical deep cleanings to advanced surgical procedures when necessary. The treatment approach depends on the severity of your condition, and we begin with a thorough evaluation to assess the extent of the disease. For early-stage gum disease, we provide scaling and root planing, which involves deep cleaning below the gumline to remove plaque and tartar, and smoothing the root surfaces to promote healing. We may also use antimicrobial treatments to eliminate bacteria and promote gum health. For more advanced cases, we offer advanced periodontal therapies including laser treatment, which can remove diseased tissue while promoting regeneration of healthy gum tissue. Surgical procedures may be necessary for severe cases to restore gum health and prevent further damage. We work closely with patients to develop effective home care routines and provide ongoing maintenance to prevent disease recurrence. Regular periodontal maintenance visits are essential for managing gum disease and preventing its progression.
+                  White-collar crimes including fraud, embezzlement, money laundering, and other financial crimes are complex cases that require specialized knowledge and experience. Our criminal defense attorneys have extensive experience defending clients against white-collar crime charges in both state and federal courts. We understand the complex financial and legal issues involved in these cases and know how to effectively challenge the prosecution's evidence and theories. We work with forensic accountants, financial experts, and other professionals to build strong defenses. Our goal is to protect your rights, reputation, and future while working to achieve the best possible outcome. White-collar crime cases often involve extensive investigations and complex evidence, and we're prepared to invest the time and resources necessary to build a strong defense. We work to have charges dismissed, reduced, or negotiate favorable plea agreements, and we're prepared to take your case to trial when necessary to protect your rights and achieve justice.
                 </p>
                 <Link
                   to="/specialized-care/periodontal-treatment"
@@ -216,4 +216,3 @@ const SpecializedCare = () => {
 }
 
 export default SpecializedCare
-

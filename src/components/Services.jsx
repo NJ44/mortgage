@@ -6,22 +6,22 @@ import { Timeline } from "./ui/timeline";
 const ServicesTimeline = () => {
   const data = [
     {
-      title: "General Dentistry",
+      title: "Business Law",
       content: (
         <div>
           <div className="mb-6">
             <img
-              src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&h=400&fit=crop"
-              alt="General Dentistry"
+              src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=400&fit=crop"
+              alt="Business Law"
               className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
             />
           </div>
           <div className="text-sm md:text-base font-normal mb-6 leading-relaxed space-y-4" style={{ color: '#000000', opacity: 1 }}>
             <p style={{ color: '#000000', opacity: 1 }}>
-              Our comprehensive general dentistry services provide you and your family with the highest quality dental care in a comfortable, welcoming environment. Whether you're visiting us for a routine checkup or addressing a specific dental concern, our experienced team is committed to delivering personalized care that meets your unique needs.
+              Our comprehensive business law services provide your company with expert legal guidance in a professional, results-driven environment. Whether you're starting a new business, navigating complex contracts, or addressing corporate compliance issues, our experienced attorneys are committed to delivering strategic solutions that protect your interests and support your growth.
             </p>
             <p style={{ color: '#000000', opacity: 1 }}>
-              During your routine examinations, our skilled dentists thoroughly assess your teeth, gums, and overall oral health using advanced diagnostic tools. Our dental hygienists use state-of-the-art equipment and techniques to remove plaque, tartar, and surface stains that regular brushing and flossing cannot eliminate.
+              Our business law practice covers entity formation, contract negotiation and drafting, employment law, intellectual property protection, mergers and acquisitions, and regulatory compliance. We work closely with businesses of all sizes to develop proactive legal strategies that minimize risk and maximize opportunities for success.
             </p>
           </div>
           <Link
@@ -34,22 +34,22 @@ const ServicesTimeline = () => {
       ),
     },
     {
-      title: "Cosmetic & Whitening",
+      title: "Personal Injury",
       content: (
         <div>
           <div className="mb-6">
             <img
-              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=400&fit=crop"
-              alt="Cosmetic & Whitening"
+              src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=400&fit=crop"
+              alt="Personal Injury"
               className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
             />
           </div>
           <div className="text-sm md:text-base font-normal mb-6 leading-relaxed space-y-4" style={{ color: '#000000', opacity: 1 }}>
             <p style={{ color: '#000000', opacity: 1 }}>
-              Our cosmetic dentistry services help you achieve the smile of your dreams through advanced techniques and personalized treatment plans. Whether you're looking to brighten your teeth, correct imperfections, or completely transform your smile, our experienced cosmetic dentists have the expertise to deliver stunning, natural-looking results.
+              Our personal injury practice helps accident victims recover the compensation they deserve through aggressive representation and proven litigation strategies. Whether you've been injured in a car accident, workplace incident, or due to medical malpractice, our experienced personal injury attorneys have the expertise to build strong cases and achieve maximum settlements.
             </p>
             <p style={{ color: '#000000', opacity: 1 }}>
-              Professional teeth whitening treatments use professional-grade bleaching agents that are far more effective than over-the-counter products, delivering dramatic results in just one visit. We also offer dental veneers—thin, custom-made shells that cover imperfections such as chips, cracks, gaps, discoloration, or misalignment.
+              We handle all types of personal injury cases including motor vehicle accidents, slip and fall incidents, product liability, wrongful death, and catastrophic injuries. Our team conducts thorough investigations, works with expert witnesses, and negotiates aggressively with insurance companies to ensure you receive full and fair compensation for your injuries, medical expenses, lost wages, and pain and suffering.
             </p>
           </div>
           <Link
@@ -62,22 +62,22 @@ const ServicesTimeline = () => {
       ),
     },
     {
-      title: "Specialized Care",
+      title: "Criminal Defense",
       content: (
         <div>
           <div className="mb-6">
             <img
-              src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&h=400&fit=crop"
-              alt="Specialized Care"
+              src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=400&fit=crop"
+              alt="Criminal Defense"
               className="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg"
             />
           </div>
           <div className="text-sm md:text-base font-normal mb-6 leading-relaxed space-y-4" style={{ color: '#000000', opacity: 1 }}>
             <p style={{ color: '#000000', opacity: 1 }}>
-              Our specialized care services encompass advanced dental procedures designed to address complex oral health issues. From dental implants that replace missing teeth to emergency care that provides immediate relief, our team of skilled specialists is equipped with the latest technology to deliver exceptional results.
+              Our criminal defense practice provides aggressive representation for individuals facing criminal charges at both state and federal levels. From misdemeanors to serious felonies, our experienced criminal defense attorneys are equipped with extensive trial experience and a proven track record of achieving favorable outcomes for our clients.
             </p>
             <p style={{ color: '#000000', opacity: 1 }}>
-              Dental implants offer a permanent solution for missing teeth that closely mimics the look, feel, and function of natural teeth. We also provide root canal therapy to save infected or damaged teeth, and emergency dental care for patients experiencing sudden pain or trauma.
+              We handle all types of criminal cases including DUI/DWI, drug offenses, assault, theft, white-collar crimes, and violent crimes. Our defense strategy includes thorough case investigation, challenging evidence, negotiating with prosecutors, and when necessary, aggressive trial representation. We understand the serious consequences of criminal charges and fight tirelessly to protect your rights, freedom, and future.
             </p>
           </div>
           <Link

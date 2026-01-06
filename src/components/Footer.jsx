@@ -13,7 +13,7 @@ const Footer = () => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'DentalClinic',
+            '@type': 'LegalService',
             name: config.BUSINESS_NAME,
             description: config.TAGLINE,
             address: {

@@ -10,83 +10,83 @@ const getPageMetadata = (pathname) => {
   const metadataMap = {
     '/': {
       title: `${baseTitle}`,
-      description: `Professional dental services in ${city}. Comprehensive general dentistry, cosmetic treatments, and specialized care. Same-week appointments available.`
+      description: `Experienced legal representation in ${city}. Business law, personal injury, criminal defense, and more. Free consultations available.`
     },
     '/general-dentistry': {
-      title: `General Dentistry Services in ${city} | ${baseTitle}`,
-      description: `Complete general dentistry services in ${city}. Routine cleanings, fillings, root canals, and preventive care. Expert dental team accepting new patients.`
+      title: `Business Law Services in ${city} | ${baseTitle}`,
+      description: `Expert business law services in ${city}. Entity formation, contracts, employment law, and intellectual property. Strategic legal counsel for your business.`
     },
     '/cosmetic-whitening': {
-      title: `Cosmetic Dentistry & Teeth Whitening in ${city} | ${baseTitle}`,
-      description: `Transform your smile with professional cosmetic dentistry in ${city}. Teeth whitening, veneers, bonding, and smile makeovers. Book your consultation today.`
+      title: `Personal Injury Attorneys in ${city} | ${baseTitle}`,
+      description: `Experienced personal injury lawyers in ${city}. Motor vehicle accidents, slip and fall, workplace injuries. Free consultation. Maximum compensation for your injuries.`
     },
     '/specialized-care': {
-      title: `Specialized Dental Care in ${city} | Implants, Orthodontics & More | ${baseTitle}`,
-      description: `Advanced specialized dental services in ${city}. Dental implants, orthodontics, emergency care, and periodontal treatment. Expert care for complex dental needs.`
+      title: `Criminal Defense Attorneys in ${city} | DUI, Drug Crimes & More | ${baseTitle}`,
+      description: `Aggressive criminal defense representation in ${city}. DUI/DWI, drug crimes, assault, white-collar crimes. Free consultation. Protecting your rights and freedom.`
     },
     '/general-dentistry/routine-cleanings-exams': {
-      title: `Routine Dental Cleanings & Exams in ${city} | ${baseTitle}`,
-      description: `Professional dental cleanings and comprehensive exams in ${city}. Preventive care to maintain healthy teeth and gums. Book your routine checkup today.`
+      title: `Entity Formation Services in ${city} | ${baseTitle}`,
+      description: `Business entity formation in ${city}. Corporations, LLCs, partnerships. Expert guidance on choosing the right business structure. Free consultation.`
     },
     '/general-dentistry/fillings-restorations': {
-      title: `Dental Fillings & Restorations in ${city} | ${baseTitle}`,
-      description: `Quality dental fillings and tooth restorations in ${city}. Natural-looking composite fillings and restoration services. Restore your smile with expert care.`
+      title: `Contract Services in ${city} | ${baseTitle}`,
+      description: `Expert contract drafting and review in ${city}. Employment agreements, vendor contracts, service agreements. Protect your business interests.`
     },
     '/general-dentistry/root-canal-therapy': {
-      title: `Root Canal Therapy in ${city} | Pain-Free Treatment | ${baseTitle}`,
-      description: `Expert root canal therapy in ${city}. Comfortable, pain-free treatment to save infected teeth. Advanced technology and gentle approach.`
+      title: `Employment Law Services in ${city} | ${baseTitle}`,
+      description: `Employment law counsel in ${city}. Employment contracts, workplace policies, compliance, and dispute resolution. Protect your business.`
     },
     '/general-dentistry/gum-disease-treatment': {
-      title: `Gum Disease Treatment in ${city} | Periodontal Care | ${baseTitle}`,
-      description: `Comprehensive gum disease treatment and periodontal care in ${city}. Prevent and treat gingivitis and periodontitis. Restore your gum health.`
+      title: `Intellectual Property Services in ${city} | ${baseTitle}`,
+      description: `Intellectual property protection in ${city}. Trademarks, copyrights, trade secrets, and licensing. Protect your valuable business assets.`
     },
     '/cosmetic-whitening/teeth-whitening': {
-      title: `Professional Teeth Whitening in ${city} | Brighten Your Smile | ${baseTitle}`,
-      description: `Safe and effective teeth whitening in ${city}. Professional in-office and take-home whitening options. Get a brighter smile in just one visit.`
+      title: `Motor Vehicle Accident Attorneys in ${city} | ${baseTitle}`,
+      description: `Experienced car accident lawyers in ${city}. Maximum compensation for motor vehicle accidents. Free consultation. No fee unless we win.`
     },
     '/cosmetic-whitening/dental-veneers': {
-      title: `Dental Veneers in ${city} | Porcelain & Composite Veneers | ${baseTitle}`,
-      description: `Transform your smile with dental veneers in ${city}. Porcelain and composite veneers to correct chips, gaps, and discoloration. Natural-looking results.`
+      title: `Slip and Fall Accident Lawyers in ${city} | ${baseTitle}`,
+      description: `Premises liability attorneys in ${city}. Slip and fall accidents, property owner negligence. Free consultation. Recover compensation for your injuries.`
     },
     '/cosmetic-whitening/dental-bonding': {
-      title: `Dental Bonding in ${city} | Cosmetic Tooth Repair | ${baseTitle}`,
-      description: `Affordable dental bonding in ${city}. Quick cosmetic repair for chipped, cracked, or discolored teeth. Same-day results.`
+      title: `Workplace Injury Attorneys in ${city} | ${baseTitle}`,
+      description: `Workplace injury lawyers in ${city}. Construction accidents, industrial injuries, workers' compensation. Free consultation.`
     },
     '/cosmetic-whitening/smile-makeover': {
-      title: `Complete Smile Makeover in ${city} | Transform Your Smile | ${baseTitle}`,
-      description: `Complete smile makeover consultation in ${city}. Custom treatment plans combining whitening, veneers, and cosmetic procedures for your perfect smile.`
+      title: `Wrongful Death Attorneys in ${city} | ${baseTitle}`,
+      description: `Compassionate wrongful death representation in ${city}. Hold negligent parties accountable. Free consultation. Financial support for your family.`
     },
     '/specialized-care/dental-implants': {
-      title: `Dental Implants in ${city} | Permanent Tooth Replacement | ${baseTitle}`,
-      description: `Premium dental implants in ${city}. Permanent solution for missing teeth with natural-looking results. Expert implant placement and restoration.`
+      title: `DUI/DWI Defense Attorneys in ${city} | ${baseTitle}`,
+      description: `Experienced DUI/DWI defense lawyers in ${city}. Protect your license and minimize consequences. Free consultation. Aggressive defense representation.`
     },
     '/specialized-care/emergency-care': {
-      title: `Emergency Dental Care in ${city} | Same-Day Appointments | ${baseTitle}`,
-      description: `Emergency dental services in ${city}. Same-day appointments for dental emergencies. Pain relief, tooth repair, and urgent dental care available.`
+      title: `Drug Crime Defense Attorneys in ${city} | ${baseTitle}`,
+      description: `Criminal defense for drug charges in ${city}. Possession, distribution, trafficking. Free consultation. Protect your rights and freedom.`
     },
     '/specialized-care/orthodontics': {
-      title: `Orthodontic Treatment in ${city} | Braces & Invisalign | ${baseTitle}`,
-      description: `Modern orthodontic treatment in ${city}. Traditional braces, Invisalign, and clear aligners to straighten teeth. Free consultation available.`
+      title: `Assault & Violent Crime Defense in ${city} | ${baseTitle}`,
+      description: `Aggressive defense for assault and violent crime charges in ${city}. Self-defense, false accusations. Free consultation. Protect your future.`
     },
     '/specialized-care/periodontal-treatment': {
-      title: `Periodontal Treatment in ${city} | Advanced Gum Care | ${baseTitle}`,
-      description: `Expert periodontal treatment in ${city}. Advanced procedures for gum disease, scaling, root planing, and gum surgery. Restore your oral health.`
+      title: `White-Collar Crime Defense in ${city} | ${baseTitle}`,
+      description: `Expert white-collar crime defense in ${city}. Fraud, embezzlement, money laundering. Free consultation. Protect your reputation and freedom.`
     },
     '/our-practice': {
-      title: `About Our Practice | ${baseTitle} — ${city} Dentist`,
-      description: `Learn about ${baseTitle} in ${city}. Our modern facility, experienced team, and commitment to providing exceptional dental care in a comfortable environment.`
+      title: `About Our Firm | ${baseTitle} — ${city} Law Firm`,
+      description: `Learn about ${baseTitle} in ${city}. Our experienced attorneys, proven track record, and commitment to providing exceptional legal representation.`
     },
     '/reviews': {
-      title: `Patient Reviews & Testimonials | ${baseTitle} — ${city}`,
-      description: `Read real patient reviews and testimonials about ${baseTitle} in ${city}. See why our patients trust us with their dental care needs.`
+      title: `Client Reviews & Testimonials | ${baseTitle} — ${city}`,
+      description: `Read real client reviews and testimonials about ${baseTitle} in ${city}. See why our clients trust us with their legal needs.`
     },
     '/contact': {
-      title: `Contact Us | ${baseTitle} — ${city} Dental Office`,
-      description: `Contact ${baseTitle} in ${city}. Schedule an appointment, ask questions, or visit our office. We're here to help with all your dental care needs.`
+      title: `Contact Us | ${baseTitle} — ${city} Law Office`,
+      description: `Contact ${baseTitle} in ${city}. Schedule a free consultation, ask questions, or visit our office. We're here to help with all your legal needs.`
     },
     '/blog': {
-      title: `Dental Health Blog & Tips | ${baseTitle} — ${city}`,
-      description: `Dental health tips, oral care advice, and latest updates from ${baseTitle} in ${city}. Learn how to maintain a healthy, beautiful smile.`
+      title: `Legal Blog & Updates | ${baseTitle} — ${city}`,
+      description: `Legal insights, case updates, and helpful information from ${baseTitle} in ${city}. Stay informed about your rights and legal matters.`
     }
   }
 
@@ -97,7 +97,7 @@ const getPageMetadata = (pathname) => {
     if (location) {
       return {
         title: `${location.name} | ${baseTitle} — ${location.city}`,
-        description: `Visit ${baseTitle} at ${location.name} in ${location.city}. ${location.address}, ${location.city}. Contact us at ${location.phone} to schedule your appointment.`
+        description: `Visit ${baseTitle} at ${location.name} in ${location.city}. ${location.address}, ${location.city}. Contact us at ${location.phone} to schedule your free consultation.`
       }
     }
   }
@@ -140,13 +140,13 @@ const SEO = () => {
         }}
       />
 
-      {/* LocalBusiness Schema */}
+      {/* LegalService Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
+            '@type': 'LegalService',
             '@id': canonicalUrl,
             name: config.BUSINESS_NAME,
             description: description,
@@ -166,13 +166,13 @@ const SEO = () => {
               {
                 '@type': 'OpeningHoursSpecification',
                 dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-                opens: '08:00',
+                opens: '09:00',
                 closes: '18:00',
               },
               {
                 '@type': 'OpeningHoursSpecification',
                 dayOfWeek: 'Saturday',
-                opens: '09:00',
+                opens: '10:00',
                 closes: '14:00',
               },
             ],
@@ -184,48 +184,48 @@ const SEO = () => {
             // Add services schema
             hasOfferCatalog: {
               '@type': 'OfferCatalog',
-              name: 'Dental Services',
+              name: 'Legal Services',
               itemListElement: [
                 {
                   '@type': 'Offer',
                   itemOffered: {
                     '@type': 'Service',
-                    name: 'General Dentistry',
+                    name: 'Business Law',
                   },
                 },
                 {
                   '@type': 'Offer',
                   itemOffered: {
                     '@type': 'Service',
-                    name: 'Teeth Whitening',
+                    name: 'Personal Injury',
                   },
                 },
                 {
                   '@type': 'Offer',
                   itemOffered: {
                     '@type': 'Service',
-                    name: 'Cosmetic Dentistry',
+                    name: 'Criminal Defense',
                   },
                 },
                 {
                   '@type': 'Offer',
                   itemOffered: {
                     '@type': 'Service',
-                    name: 'Dental Implants',
+                    name: 'Family Law',
                   },
                 },
                 {
                   '@type': 'Offer',
                   itemOffered: {
                     '@type': 'Service',
-                    name: 'Emergency Care',
+                    name: 'Estate Planning',
                   },
                 },
                 {
                   '@type': 'Offer',
                   itemOffered: {
                     '@type': 'Service',
-                    name: 'Orthodontics',
+                    name: 'Real Estate Law',
                   },
                 },
               ],

@@ -111,45 +111,45 @@ function NavBar({ className }) {
           <MenuItem setActive={setActive} active={active} item={t.nav.services}>
             <div className="text-sm grid grid-cols-2 gap-6 p-4">
               <ProductItem
-                title="General Dentistry"
+                title="Business Law"
                 href="/general-dentistry"
-                src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=200&h=120&fit=crop"
-                description="Comprehensive dental care for the whole family"
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=200&h=120&fit=crop"
+                description="Corporate law, contracts, and business formation"
                 onClick={() => handleLinkClick("/general-dentistry")}
               />
               <ProductItem
-                title="Cosmetic & Whitening"
+                title="Personal Injury"
                 href="/cosmetic-whitening"
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=200&h=120&fit=crop"
-                description="Transform your smile with professional treatments"
+                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=200&h=120&fit=crop"
+                description="Accident claims and injury compensation"
                 onClick={() => handleLinkClick("/cosmetic-whitening")}
               />
               <ProductItem
-                title="Specialized Care"
+                title="Criminal Defense"
                 href="/specialized-care"
-                src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=200&h=120&fit=crop"
-                description="Advanced treatments and specialized services"
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=200&h=120&fit=crop"
+                description="Aggressive defense for all criminal charges"
                 onClick={() => handleLinkClick("/specialized-care")}
               />
               <ProductItem
-                title="Dental Implants"
+                title="Family Law"
                 href="/specialized-care"
-                src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=200&h=120&fit=crop"
-                description="Permanent solution for missing teeth"
+                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=200&h=120&fit=crop"
+                description="Divorce, custody, and family legal matters"
                 onClick={() => handleLinkClick("/specialized-care")}
               />
               <ProductItem
-                title="Emergency Care"
+                title="Estate Planning"
                 href="/specialized-care"
-                src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=200&h=120&fit=crop"
-                description="Same-day emergency appointments available"
+                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=200&h=120&fit=crop"
+                description="Wills, trusts, and estate administration"
                 onClick={() => handleLinkClick("/specialized-care")}
               />
               <ProductItem
-                title="Orthodontics"
+                title="Real Estate Law"
                 href="/specialized-care"
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=200&h=120&fit=crop"
-                description="Straighten teeth with modern options"
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=200&h=120&fit=crop"
+                description="Property transactions and real estate disputes"
                 onClick={() => handleLinkClick("/specialized-care")}
               />
             </div>
@@ -158,17 +158,17 @@ function NavBar({ className }) {
           <MenuItem setActive={setActive} active={active} item={t.nav.aboutUs}>
             <div className="text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
-                title="Our Practice"
+                title="Our Firm"
                 href="#home"
-                src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=280&h=140&fit=crop"
-                description="Modern dental care with a friendly, professional team"
+                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=280&h=140&fit=crop"
+                description="Experienced legal representation with a dedicated team"
                 onClick={() => scrollToSection("#home")}
               />
               <ProductItem
-                title="Patient Reviews"
+                title="Client Reviews"
                 href="/reviews"
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=280&h=140&fit=crop"
-                description="See what our patients say about their experience"
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=280&h=140&fit=crop"
+                description="See what our clients say about their experience"
                 onClick={() => handleLinkClick("/reviews")}
               />
               <ProductItem
@@ -299,7 +299,7 @@ function NavBar({ className }) {
                   }}
                   className="block py-2 text-black hover:text-primary transition-colors"
                 >
-                  General Dentistry
+                  Business Law
                 </a>
                 <a
                   href="/cosmetic-whitening"
@@ -309,7 +309,7 @@ function NavBar({ className }) {
                   }}
                   className="block py-2 text-black hover:text-primary transition-colors"
                 >
-                  Cosmetic & Whitening
+                  Personal Injury
                 </a>
                 <a
                   href="/specialized-care"
@@ -319,7 +319,7 @@ function NavBar({ className }) {
                   }}
                   className="block py-2 text-black hover:text-primary transition-colors"
                 >
-                  Specialized Care
+                  Criminal Defense
                 </a>
               </div>
             </div>
@@ -336,7 +336,7 @@ function NavBar({ className }) {
                   }}
                   className="block py-2 text-black hover:text-primary transition-colors"
                 >
-                  Our Practice
+                  Our Firm
                 </a>
                 <a
                   href="/reviews"
@@ -346,7 +346,7 @@ function NavBar({ className }) {
                   }}
                   className="block py-2 text-black hover:text-primary transition-colors"
                 >
-                  Patient Reviews
+                  Client Reviews
                 </a>
                 <a
                   href="#map"

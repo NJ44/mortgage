@@ -16,8 +16,8 @@ const CosmeticWhitening = () => {
           transition={{ duration: 0.8 }}
         >
           <img
-            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&h=600&fit=crop"
-            alt="Cosmetic & Whitening"
+            src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&h=600&fit=crop"
+            alt="Personal Injury"
             className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-lg"
           />
         </motion.div>
@@ -29,7 +29,7 @@ const CosmeticWhitening = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Cosmetic & Whitening
+          Personal Injury
         </motion.h1>
 
         <motion.div 
@@ -40,27 +40,27 @@ const CosmeticWhitening = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <p className="mb-4">
-            A beautiful, confident smile can transform your appearance and boost your self-esteem. At {config.BUSINESS_NAME}, our cosmetic dentistry services are designed to help you achieve the smile of your dreams through advanced techniques and personalized treatment plans. Whether you're looking to brighten your teeth, correct imperfections, or completely transform your smile, our experienced cosmetic dentists have the expertise and artistic vision to deliver stunning results that look natural and enhance your unique features.
+            When you've been injured due to someone else's negligence, you deserve experienced legal representation that will fight aggressively for your rights and help you recover the full compensation you're entitled to. At {config.BUSINESS_NAME}, our personal injury practice is dedicated to helping accident victims navigate the complex legal process while focusing on their recovery. Whether you've been injured in a car accident, workplace incident, slip and fall, or due to medical malpractice, our experienced personal injury attorneys have the expertise, resources, and proven track record to build strong cases and achieve maximum settlements.
           </p>
 
           <p className="mb-4">
-            Professional teeth whitening is one of the most popular cosmetic dental procedures, and for good reason. Over time, our teeth naturally become discolored due to aging, consumption of staining foods and beverages, smoking, and other factors. Our in-office whitening treatments use professional-grade bleaching agents that are far more effective than over-the-counter products, delivering dramatic results in just one visit. For patients who prefer the convenience of at-home treatment, we also offer custom-fitted whitening trays with professional-grade gel that you can use in the comfort of your own home, allowing you to whiten your teeth at your own pace.
+            Our personal injury practice encompasses a comprehensive range of services designed to help injured individuals recover physically, emotionally, and financially. We understand that being injured in an accident can be a life-changing experience, affecting not only your physical health but also your ability to work, your relationships, and your overall quality of life. That's why we take a client-centered approach, providing compassionate support while aggressively pursuing your case to ensure you receive full and fair compensation for your injuries, medical expenses, lost wages, pain and suffering, and other damages.
           </p>
 
           <p className="mb-4">
-            Dental veneers represent the gold standard in cosmetic dentistry for transforming smiles. These thin, custom-made shells are bonded to the front surface of your teeth, effectively covering imperfections such as chips, cracks, gaps, discoloration, or misalignment. Made from high-quality porcelain or composite materials, veneers are designed to match the natural translucency and color of your teeth, creating a seamless, beautiful appearance. The process involves careful planning and precise placement to ensure your new smile looks completely natural while dramatically improving your appearance.
+            We handle all types of personal injury cases, including motor vehicle accidents, truck accidents, motorcycle accidents, pedestrian accidents, bicycle accidents, workplace injuries, slip and fall incidents, product liability cases, medical malpractice, wrongful death, and catastrophic injuries. Our team conducts thorough investigations, works with expert witnesses including medical professionals, accident reconstruction specialists, and economists, and negotiates aggressively with insurance companies to ensure you receive the compensation you deserve. We understand the tactics insurance companies use to minimize payouts, and we're prepared to fight for your rights every step of the way.
           </p>
 
           <p className="mb-4">
-            For patients seeking a complete smile makeover, we offer comprehensive cosmetic treatment planning that addresses multiple aspects of your smile. This may include a combination of whitening, veneers, bonding, gum contouring, and orthodontic treatment to create a harmonious, balanced result. Our cosmetic dentists work closely with you to understand your goals and develop a treatment plan that achieves the smile you've always wanted while maintaining the health and function of your teeth.
+            The personal injury claims process can be complex and overwhelming, especially when you're dealing with injuries and medical treatment. Our attorneys handle all aspects of your case, from initial investigation and evidence gathering to negotiation and, when necessary, trial representation. We work on a contingency fee basis, which means you don't pay any attorney fees unless we successfully recover compensation for you. This allows you to focus on your recovery while we handle the legal complexities of your case.
           </p>
 
           <p className="mb-4">
-            Dental bonding is another versatile cosmetic procedure that can quickly and affordably address minor imperfections. Using tooth-colored composite resin, we can repair chips, close small gaps, reshape teeth, and cover stains. The bonding material is carefully sculpted and polished to blend seamlessly with your natural teeth, and the entire procedure can often be completed in a single visit. While bonding may not be as durable as veneers, it provides an excellent solution for minor cosmetic concerns and can be easily maintained or replaced as needed.
+            Time is critical in personal injury cases, as there are strict deadlines for filing claims and preserving evidence. We recommend contacting us as soon as possible after your accident so we can begin investigating your case immediately, gathering evidence while it's still fresh, interviewing witnesses, and taking steps to protect your rights. Early intervention can make a significant difference in the outcome of your case, as evidence can disappear, witnesses' memories can fade, and important deadlines can be missed if action isn't taken promptly.
           </p>
 
           <p className="mb-6">
-            At {config.BUSINESS_NAME}, we believe that everyone deserves to feel confident about their smile. Our cosmetic dentistry services combine artistic skill with advanced dental technology to deliver results that exceed expectations. We take the time to understand your vision, discuss all available options, and create a treatment plan that fits your lifestyle and budget. Whether you're preparing for a special event or simply want to improve your everyday confidence, our cosmetic dentistry services can help you achieve a smile that you'll be proud to share. Contact us today to schedule a cosmetic consultation and discover how we can transform your smile.
+            At {config.BUSINESS_NAME}, we believe that every injured person deserves access to quality legal representation, regardless of their financial situation. Our personal injury attorneys combine extensive legal knowledge with genuine compassion for our clients, ensuring you receive both aggressive advocacy and supportive guidance throughout your case. We take the time to understand your unique situation, explain all legal options clearly, and fight tirelessly to achieve the best possible outcome for you and your family. Contact us today for a free consultation to discuss your case and learn how we can help you recover the compensation you deserve.
           </p>
         </motion.div>
 
@@ -79,7 +79,7 @@ const CosmeticWhitening = () => {
             }}
             className="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors"
           >
-            Book a Consultation
+            Free Consultation
           </a>
         </motion.div>
 
@@ -98,7 +98,7 @@ const CosmeticWhitening = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Our Cosmetic & Whitening Services
+            Our Personal Injury Services
           </motion.h2>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Service 1 */}
@@ -110,14 +110,14 @@ const CosmeticWhitening = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=300&fit=crop"
-                alt="Teeth Whitening"
+                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=300&fit=crop"
+                alt="Motor Vehicle Accidents"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Teeth Whitening</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Motor Vehicle Accidents</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Professional teeth whitening is one of the most popular and effective ways to dramatically brighten your smile. Over time, our teeth naturally become discolored due to aging, consumption of staining foods and beverages like coffee, tea, and wine, smoking, and other factors. Our in-office whitening treatments use professional-grade bleaching agents that are far more effective than over-the-counter products, delivering dramatic results in just one visit. The procedure is safe, comfortable, and supervised by our experienced dental team to ensure optimal results. For patients who prefer the convenience of at-home treatment, we also offer custom-fitted whitening trays with professional-grade gel that you can use in the comfort of your own home, allowing you to whiten your teeth at your own pace. We take impressions of your teeth to create trays that fit perfectly, ensuring even whitening and preventing gel from irritating your gums. Both in-office and at-home whitening options can lighten your teeth by several shades, giving you a noticeably brighter, more youthful smile. We'll discuss your goals and lifestyle to recommend the best whitening option for you, and provide guidance on maintaining your results long-term.
+                  Motor vehicle accidents are among the most common causes of personal injury, and they can result in serious injuries, significant medical expenses, and long-term disability. Our attorneys have extensive experience representing clients injured in car accidents, truck accidents, motorcycle accidents, and other motor vehicle collisions. We understand the complexities of motor vehicle accident cases, including insurance coverage issues, comparative negligence laws, and the importance of thorough accident reconstruction. We work with expert witnesses including accident reconstruction specialists, medical professionals, and economists to build strong cases that demonstrate the full extent of your injuries and damages. Our goal is to recover maximum compensation for your medical expenses, lost wages, pain and suffering, property damage, and other losses. We handle all aspects of your case, from investigating the accident and gathering evidence to negotiating with insurance companies and, when necessary, taking your case to trial.
                 </p>
                 <Link
                   to="/cosmetic-whitening/teeth-whitening"
@@ -137,14 +137,14 @@ const CosmeticWhitening = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&h=300&fit=crop"
-                alt="Dental Veneers"
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=300&fit=crop"
+                alt="Slip and Fall Accidents"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Dental Veneers</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Slip and Fall Accidents</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Dental veneers represent the gold standard in cosmetic dentistry for transforming smiles. These thin, custom-made shells are bonded to the front surface of your teeth, effectively covering imperfections such as chips, cracks, gaps, discoloration, or misalignment. Made from high-quality porcelain or composite materials, veneers are designed to match the natural translucency and color of your teeth, creating a seamless, beautiful appearance that looks completely natural. The veneer process begins with a comprehensive consultation where we discuss your goals and examine your teeth to determine if veneers are the right solution for you. We then prepare your teeth by removing a small amount of enamel to make room for the veneers, take detailed impressions, and send them to a skilled dental laboratory where your custom veneers are crafted. During the fabrication period, temporary veneers protect your prepared teeth. Once your permanent veneers are ready, we carefully bond them to your teeth using a strong adhesive, ensuring perfect fit and alignment. The result is a dramatically improved smile that can last for many years with proper care. Veneers are stain-resistant and durable, making them an excellent long-term investment in your smile's appearance.
+                  Property owners have a legal duty to maintain safe premises and warn visitors of known hazards. When they fail to meet this duty and you're injured as a result, you may be entitled to compensation for your injuries. Slip and fall accidents can occur due to wet floors, uneven surfaces, inadequate lighting, missing handrails, or other hazardous conditions. Our attorneys have extensive experience representing clients injured in slip and fall accidents at stores, restaurants, hotels, apartment buildings, and other properties. We understand the legal standards for premises liability cases and know how to investigate these cases effectively, including preserving evidence, documenting the hazardous condition, and establishing that the property owner knew or should have known about the dangerous condition. We work to recover compensation for your medical expenses, lost wages, pain and suffering, and other damages resulting from your slip and fall accident.
                 </p>
                 <Link
                   to="/cosmetic-whitening/dental-veneers"
@@ -164,14 +164,14 @@ const CosmeticWhitening = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&h=300&fit=crop"
-                alt="Dental Bonding"
+                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=300&fit=crop"
+                alt="Workplace Injuries"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Dental Bonding</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Workplace Injuries</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Dental bonding is a versatile and affordable cosmetic procedure that can quickly address minor imperfections in your smile. Using tooth-colored composite resin, we can repair chips, close small gaps, reshape teeth, cover stains, and improve the overall appearance of your teeth. The bonding material is carefully selected to match your natural tooth color and translucency, then sculpted and polished to blend seamlessly with your existing teeth. The procedure is typically completed in a single visit and requires minimal preparation of the tooth surface. We begin by selecting the perfect shade of composite resin to match your natural teeth, then apply a conditioning liquid to help the bonding material adhere. The resin is applied, shaped, and hardened with a special light, then polished to a natural-looking finish. Dental bonding is an excellent solution for minor cosmetic concerns and can be easily maintained or replaced as needed. While bonding may not be as durable as veneers, it provides an effective and affordable way to improve your smile's appearance without the need for extensive tooth preparation. The procedure is comfortable, quick, and can make a significant difference in your smile's appearance.
+                  Workplace injuries can have devastating consequences, affecting your ability to work, your income, and your quality of life. While workers' compensation may provide some benefits, it often doesn't cover the full extent of your losses, especially if your injury was caused by a third party's negligence. Our attorneys represent workers injured on the job, including construction accidents, industrial accidents, and other workplace injuries. We understand both workers' compensation claims and third-party liability claims, and we work to ensure you receive all the benefits and compensation you're entitled to. We also represent workers who have been injured due to unsafe working conditions, defective equipment, or employer negligence. Our goal is to help you recover maximum compensation for your medical expenses, lost wages, disability, pain and suffering, and other damages, while ensuring you receive proper medical care and support throughout your recovery.
                 </p>
                 <Link
                   to="/cosmetic-whitening/dental-bonding"
@@ -191,14 +191,14 @@ const CosmeticWhitening = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=600&h=300&fit=crop"
-                alt="Smile Makeover"
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=300&fit=crop"
+                alt="Wrongful Death"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Smile Makeover</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Wrongful Death</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  A complete smile makeover is a comprehensive cosmetic treatment plan that addresses multiple aspects of your smile to create a harmonious, balanced, and beautiful result. This personalized approach combines various cosmetic procedures including whitening, veneers, bonding, gum contouring, and sometimes orthodontic treatment to achieve your dream smile. The process begins with an in-depth consultation where we discuss your goals, examine your current smile, and use digital imaging to show you potential results. We consider factors such as your facial features, skin tone, lip shape, and personal preferences to design a smile that enhances your natural beauty. Our cosmetic dentists work closely with you throughout the process, explaining each step and ensuring you're comfortable with the treatment plan. A smile makeover may involve multiple visits over several months, but the transformation can be truly remarkable. We use advanced technology including digital smile design to plan your makeover and ensure optimal results. Whether you're preparing for a special event or simply want to improve your everyday confidence, a smile makeover can give you the beautiful, natural-looking smile you've always wanted. The investment in a smile makeover can significantly boost your self-esteem and improve your quality of life.
+                  Losing a loved one due to someone else's negligence is one of the most devastating experiences a family can face. While no amount of money can replace your loved one, a wrongful death claim can provide financial support for your family and hold the responsible party accountable. Our attorneys provide compassionate representation for families who have lost loved ones due to accidents, medical malpractice, defective products, or other forms of negligence. We understand the emotional and financial impact of wrongful death, and we work to recover compensation for funeral expenses, lost income, loss of companionship, and other damages. Wrongful death cases are complex and require thorough investigation, expert testimony, and aggressive advocacy. We handle all aspects of your case with sensitivity and professionalism, allowing you to focus on grieving and healing while we fight for justice on behalf of your loved one.
                 </p>
                 <Link
                   to="/cosmetic-whitening/smile-makeover"
@@ -216,4 +216,3 @@ const CosmeticWhitening = () => {
 }
 
 export default CosmeticWhitening
-

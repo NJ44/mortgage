@@ -5,7 +5,7 @@ import { config } from '../config';
 function TopBanner() {
   const displayEmail = config.EMAIL && !config.EMAIL.startsWith('{{') 
     ? config.EMAIL 
-    : 'info@dentalcare.com';
+    : 'info@lawfirm.com';
   const displayPhone = config.PHONE || '0546728171';
 
   return (
