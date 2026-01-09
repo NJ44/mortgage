@@ -6,7 +6,7 @@ import { TestimonialsColumn } from '../components/ui/testimonials-columns-1'
 const Reviews = () => {
   // Convert sample reviews to testimonials format
   const reviews = config.GOOGLE_REVIEWS_DATA || sampleReviews
-  
+
   // Map reviews to testimonials format with images
   const testimonialImages = [
     "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces",
@@ -19,7 +19,7 @@ const Reviews = () => {
     "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=faces",
     "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=100&h=100&fit=crop&crop=faces",
   ]
-  
+
   const testimonials = reviews.map((review, index) => ({
     text: review.text,
     image: testimonialImages[index % testimonialImages.length],
@@ -33,7 +33,7 @@ const Reviews = () => {
     <div className="min-h-screen bg-white pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ const Reviews = () => {
             Patient Reviews
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            See what our patients say about their experience at {config.BUSINESS_NAME}
+            See what our clients say about their experience at {config.BUSINESS_NAME}
           </p>
         </motion.div>
 
@@ -66,7 +66,7 @@ const Reviews = () => {
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div 
+        <motion.div
           className="text-center mt-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ const Reviews = () => {
             Ready to Experience Our Care?
           </h2>
           <p className="text-lg text-gray-600 mb-6">
-            Join our satisfied patients and book your appointment today
+            Join our satisfied clients and get a quote today
           </p>
           <a
             href="#contact"
@@ -94,7 +94,7 @@ const Reviews = () => {
             }}
             className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
           >
-            Book an Appointment
+            Get Started
           </a>
         </motion.div>
       </div>

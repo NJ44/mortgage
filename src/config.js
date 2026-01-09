@@ -1,50 +1,49 @@
 // CLIENT VARIABLES - Replace these with actual values
 export const config = {
-  BUSINESS_NAME: "Law Firm",
-  TAGLINE: "{{TAGLINE}}", // e.g., "Experienced legal representation near you"
-  PRIMARY_COLOR: "{{PRIMARY_COLOR}}", // hex color, e.g., "#1a1a2e"
-  ACCENT_COLOR: "{{ACCENT_COLOR}}", // hex color, e.g., "#c9a961"
-  ADDRESS_LINE: "123 Main Street",
-  CITY: "California",
-  PHONE: "0546728171",
-  EMAIL: "info@lawfirm.com",
+  BUSINESS_NAME: "Apex Mortgage Lending",
+  TAGLINE: "Your Path to Home Ownership Starts Here",
+  PRIMARY_COLOR: "#10b981", // Emerald green for money/trust
+  ACCENT_COLOR: "#1f2937", // Dark gray/slate
+  ADDRESS_LINE: "456 Finance Blvd",
+  CITY: "Charlotte, NC",
+  PHONE: "(555) 123-4567",
+  EMAIL: "loans@apexmortgage.com",
   LOGO_URL: "{{LOGO_URL}}", // optional
-  GOOGLE_MAP_EMBED_SRC: "{{GOOGLE_MAP_IFRAME_SRC}}",
-  GOOGLE_REVIEWS_DATA: null, // Will be set from {{REVIEWS_JSON}} or use sample data
+  GOOGLE_MAP_EMBED_SRC: "{{GOOGLE_MAP_IFRAME_SRC}}", // Keep placeholder
+  GOOGLE_REVIEWS_DATA: null,
   FORM_WEBHOOK_URL: "{{FORM_WEBHOOK_URL}}",
-  GOOGLE_BUSINESS_PROFILE_URL: "{{GOOGLE_BUSINESS_PROFILE_URL}}", // optional
+  GOOGLE_BUSINESS_PROFILE_URL: "{{GOOGLE_BUSINESS_PROFILE_URL}}",
   LOCATIONS: [
-    { name: "Main Office", slug: "main-office", address: "123 Main Street", city: "Los Angeles", phone: "0546728171" },
-    { name: "Downtown Branch", slug: "downtown-branch", address: "456 Oak Avenue", city: "San Francisco", phone: "0546728172" },
-    { name: "Westside Office", slug: "westside-office", address: "789 Beach Boulevard", city: "San Diego", phone: "0546728173" }
+    { name: "Main Office", slug: "main-office", address: "456 Finance Blvd", city: "Charlotte", phone: "(555) 123-4567" },
+    { name: "Southend Branch", slug: "southend-branch", address: "789 South Blvd", city: "Charlotte", phone: "(555) 987-6543" }
   ]
 };
 
-// Sample reviews data (used if GOOGLE_REVIEWS_DATA is not provided)
+// Sample reviews data
 export const sampleReviews = [
   {
-    author: "Sarah Johnson",
+    author: "Jennifer Wu",
     rating: 5,
-    date: "2024-01-15",
-    text: "Excellent legal representation! The team was professional, responsive, and helped me win my case. Highly recommend!",
+    date: "2024-02-15",
+    text: "Apex Mortgage made buying our first home incredible easily. They walked us through every step and got us a great rate!",
   },
   {
-    author: "Michael Chen",
+    author: "Mark Stevens",
     rating: 5,
-    date: "2024-01-10",
-    text: "Best law firm I've worked with. They explained everything clearly, kept me informed throughout the process, and achieved great results.",
+    date: "2024-02-10",
+    text: "Refinancing was a breeze. The team is knowledgeable and responsive. Saved us hundreds a month.",
   },
   {
-    author: "Emily Rodriguez",
+    author: "Ashley Robinson",
     rating: 5,
-    date: "2024-01-05",
-    text: "Emergency consultation was available same day. Professional and caring. Thank you for the quick help during a difficult time!",
+    date: "2024-01-25",
+    text: "Best lender experience I've ever had. Clear communication and no hidden fees. Highly recommend!",
   },
   {
-    author: "David Thompson",
+    author: "David Miller",
     rating: 5,
-    date: "2023-12-28",
-    text: "Great experience from start to finish. The attorneys are knowledgeable, the staff is welcoming, and they explained everything clearly.",
+    date: "2024-01-12",
+    text: "Professional, fast, and friendly. They closed our loan in record time so we didn't lose our dream house.",
   },
 ];
 

@@ -30,7 +30,7 @@ const Location = () => {
     <div className="min-h-screen bg-white pt-32 pb-20">
       <div className="max-w-6xl mx-auto px-4">
         {/* Hero Image */}
-        <motion.div 
+        <motion.div
           className="mb-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ const Location = () => {
         </motion.div>
 
         {/* Title */}
-        <motion.h1 
+        <motion.h1
           className="text-4xl md:text-5xl font-bold text-black mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ const Location = () => {
           >
             <div className="bg-gray-50 rounded-xl p-6 space-y-4">
               <h2 className="text-2xl font-bold text-black mb-4">Contact Information</h2>
-              
+
               <div className="flex items-start gap-4">
                 <MapPin className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                 <div>
@@ -154,13 +154,11 @@ const Location = () => {
         >
           <h2 className="text-3xl font-bold text-black mb-4">About {location.name}</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Our {location.name} location in {location.city} is equipped with state-of-the-art dental technology 
-            and staffed by experienced, caring professionals. We are committed to providing exceptional dental 
-            care in a comfortable and welcoming environment.
+            Our {location.name} location in {location.city} is staffed by experienced, caring loan officers. We are committed to providing exceptional service in a professional and welcoming environment.
           </p>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Whether you need a routine cleaning, cosmetic procedure, or specialized treatment, our team at 
-            {location.name} is here to help you achieve optimal oral health and a beautiful smile.
+            Whether you need a new home loan, refinancing, or investment advice, our team at
+            {location.name} is here to help you achieve your homeownership goals.
           </p>
         </motion.div>
 

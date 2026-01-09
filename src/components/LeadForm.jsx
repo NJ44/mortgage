@@ -99,7 +99,7 @@ const LeadForm = () => {
   return (
     <div id="appointment-form" className="bg-white rounded-2xl shadow-2xl p-3 md:p-4 max-w-sm mx-auto">
       <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">{t.form.getFreeQuote}</h2>
-      
+
       {submitStatus === 'success' ? (
         <div className="text-center py-8">
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -128,9 +128,8 @@ const LeadForm = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-2.5 py-1.5 text-xs border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${
-                errors.name ? 'border-red-500' : 'border-gray-300'
-              }`}
+              className={`w-full px-2.5 py-1.5 text-xs border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${errors.name ? 'border-red-500' : 'border-gray-300'
+                }`}
               aria-invalid={errors.name ? 'true' : 'false'}
               aria-describedby={errors.name ? 'name-error' : undefined}
             />
@@ -151,9 +150,8 @@ const LeadForm = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className={`w-full px-2.5 py-1.5 text-xs border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${
-                errors.phone ? 'border-red-500' : 'border-gray-300'
-              }`}
+              className={`w-full px-2.5 py-1.5 text-xs border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent ${errors.phone ? 'border-red-500' : 'border-gray-300'
+                }`}
               aria-invalid={errors.phone ? 'true' : 'false'}
               aria-describedby={errors.phone ? 'phone-error' : undefined}
             />
@@ -169,11 +167,12 @@ const LeadForm = () => {
               {t.form.preferredTime}
             </label>
             <input
-              type="datetime-local"
+              type="text"
               id="preferredTime"
               name="preferredTime"
               value={formData.preferredTime}
               onChange={handleChange}
+              placeholder="$300,000"
               className="w-full px-2.5 py-1.5 text-xs border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
             />
           </div>

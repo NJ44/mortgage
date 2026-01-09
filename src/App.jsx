@@ -12,28 +12,19 @@ import SEO from './components/SEO'
 import VoiceWidget from './components/VoiceWidget'
 import { LetsWorkTogether } from '@/components/ui/lets-work-section'
 import TeamSection from '@/components/ui/team-section'
-import GeneralDentistry from './pages/GeneralDentistry'
-import CosmeticWhitening from './pages/CosmeticWhitening'
-import SpecializedCare from './pages/SpecializedCare'
-import Blog from './pages/Blog'
-import OurPractice from './pages/OurPractice'
+
+// Mortgage Pages
+import ResidentialLoans from './pages/ResidentialLoans'
+import Refinancing from './pages/Refinancing'
+import NicheLoans from './pages/NicheLoans'
+import AboutUs from './pages/AboutUs'
+import Resources from './pages/Resources'
+
 import Reviews from './pages/Reviews'
 import Contact from './pages/Contact'
 import Location from './pages/Location'
-import RoutineCleaningsExams from './pages/services/RoutineCleaningsExams'
-import FillingsRestorations from './pages/services/FillingsRestorations'
-import RootCanalTherapy from './pages/services/RootCanalTherapy'
-import GumDiseaseTreatment from './pages/services/GumDiseaseTreatment'
-import TeethWhitening from './pages/services/TeethWhitening'
-import DentalVeneers from './pages/services/DentalVeneers'
-import DentalBonding from './pages/services/DentalBonding'
-import SmileMakeover from './pages/services/SmileMakeover'
-import DentalImplants from './pages/services/DentalImplants'
-import EmergencyCare from './pages/services/EmergencyCare'
-import Orthodontics from './pages/services/Orthodontics'
-import PeriodontalTreatment from './pages/services/PeriodontalTreatment'
-import { useLenis } from './hooks/useLenis'
-import { scrollToTop } from './hooks/useLenis'
+
+import { useLenis, scrollToTop } from './hooks/useLenis'
 import { config } from './config'
 
 function HomePage() {
@@ -94,29 +85,20 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/general-dentistry" element={<GeneralDentistry />} />
-          <Route path="/cosmetic-whitening" element={<CosmeticWhitening />} />
-          <Route path="/specialized-care" element={<SpecializedCare />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/our-practice" element={<OurPractice />} />
+
+          {/* Main Services */}
+          <Route path="/residential-loans" element={<ResidentialLoans />} />
+          <Route path="/refinancing" element={<Refinancing />} />
+          <Route path="/niche-loans" element={<NicheLoans />} />
+
+          {/* Company */}
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/resources" element={<Resources />} />
+
+          {/* Functional */}
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/locations/:slug" element={<Location />} />
-          {/* General Dentistry Services */}
-          <Route path="/general-dentistry/routine-cleanings-exams" element={<RoutineCleaningsExams />} />
-          <Route path="/general-dentistry/fillings-restorations" element={<FillingsRestorations />} />
-          <Route path="/general-dentistry/root-canal-therapy" element={<RootCanalTherapy />} />
-          <Route path="/general-dentistry/gum-disease-treatment" element={<GumDiseaseTreatment />} />
-          {/* Cosmetic & Whitening Services */}
-          <Route path="/cosmetic-whitening/teeth-whitening" element={<TeethWhitening />} />
-          <Route path="/cosmetic-whitening/dental-veneers" element={<DentalVeneers />} />
-          <Route path="/cosmetic-whitening/dental-bonding" element={<DentalBonding />} />
-          <Route path="/cosmetic-whitening/smile-makeover" element={<SmileMakeover />} />
-          {/* Specialized Care Services */}
-          <Route path="/specialized-care/dental-implants" element={<DentalImplants />} />
-          <Route path="/specialized-care/emergency-care" element={<EmergencyCare />} />
-          <Route path="/specialized-care/orthodontics" element={<Orthodontics />} />
-          <Route path="/specialized-care/periodontal-treatment" element={<PeriodontalTreatment />} />
         </Routes>
       </main>
       <Footer />

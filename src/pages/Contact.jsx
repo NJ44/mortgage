@@ -69,7 +69,7 @@ const Contact = () => {
     <div className="min-h-screen bg-white pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ const Contact = () => {
             Contact Us
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Get in touch with us. We're here to help with all your dental care needs.
+            Get in touch with us. We're here to help with all your home financing needs.
           </p>
         </motion.div>
 
@@ -94,7 +94,7 @@ const Contact = () => {
           >
             <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Get a Free Quote</h2>
-              
+
               {submitStatus === 'success' ? (
                 <div className="text-center py-8">
                   <div className="text-green-600 text-lg font-semibold mb-2">✓ Thank you!</div>
@@ -190,7 +190,7 @@ const Contact = () => {
                       onChange={handleChange}
                       rows={3}
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
-                      placeholder="Tell us about your dental needs..."
+                      placeholder="How can we help you?"
                     />
                   </div>
 

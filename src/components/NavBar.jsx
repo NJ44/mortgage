@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Menu as MenuIcon, X, Languages, ChevronDown } from "lucide-react";
+import { Menu as MenuIcon, X, ChevronDown } from "lucide-react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { scrollToElement } from "../hooks/useLenis";
 import { cn } from "../lib/utils";
@@ -54,7 +54,6 @@ function NavBar({ className }) {
     navigate(path);
     setActive(null);
     setIsMobileMenuOpen(false);
-    // Scroll to top when navigating to a new page
     window.scrollTo(0, 0);
   };
 
@@ -72,7 +71,7 @@ function NavBar({ className }) {
       )}
     >
       <Menu setActive={setActive} className="w-full justify-between">
-        {/* Logo - positioned on the left */}
+        {/* Logo */}
         <Link to="/" className="flex items-center flex-shrink-0" onClick={() => setIsMobileMenuOpen(false)}>
           {config.LOGO_URL && !config.LOGO_URL.startsWith("{{") ? (
             <img
@@ -87,70 +86,31 @@ function NavBar({ className }) {
           )}
         </Link>
 
-        {/* Desktop Menu items - centered */}
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6 flex-1 justify-center mx-auto">
-          <MenuItem setActive={setActive} active={active} item={t.nav.locations}>
-            <div className="text-sm grid grid-cols-2 gap-6 p-4">
-              {config.LOCATIONS && config.LOCATIONS.length > 0 ? (
-                config.LOCATIONS.map((location, index) => (
-                  <ProductItem
-                    key={index}
-                    title={location.name}
-                    href={`/locations/${location.slug}`}
-                    src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=200&h=120&fit=crop"
-                    description={`${location.address}, ${location.city}`}
-                    onClick={() => handleLinkClick(`/locations/${location.slug}`)}
-                  />
-                ))
-              ) : (
-                <div className="text-sm text-gray-600">No locations available</div>
-              )}
-            </div>
-          </MenuItem>
 
           <MenuItem setActive={setActive} active={active} item={t.nav.services}>
             <div className="text-sm grid grid-cols-2 gap-6 p-4">
               <ProductItem
-                title="Business Law"
-                href="/general-dentistry"
-                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=200&h=120&fit=crop"
-                description="Corporate law, contracts, and business formation"
-                onClick={() => handleLinkClick("/general-dentistry")}
+                title="Residential Loans"
+                href="/residential-loans"
+                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=200&h=120&fit=crop"
+                description="Conventional, FHA, VA, and USDA loans"
+                onClick={() => handleLinkClick("/residential-loans")}
               />
               <ProductItem
-                title="Personal Injury"
-                href="/cosmetic-whitening"
-                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=200&h=120&fit=crop"
-                description="Accident claims and injury compensation"
-                onClick={() => handleLinkClick("/cosmetic-whitening")}
+                title="Refinancing"
+                href="/refinancing"
+                src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=200&h=120&fit=crop"
+                description="Lower your rate or cash out equity"
+                onClick={() => handleLinkClick("/refinancing")}
               />
               <ProductItem
-                title="Criminal Defense"
-                href="/specialized-care"
-                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=200&h=120&fit=crop"
-                description="Aggressive defense for all criminal charges"
-                onClick={() => handleLinkClick("/specialized-care")}
-              />
-              <ProductItem
-                title="Family Law"
-                href="/specialized-care"
-                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=200&h=120&fit=crop"
-                description="Divorce, custody, and family legal matters"
-                onClick={() => handleLinkClick("/specialized-care")}
-              />
-              <ProductItem
-                title="Estate Planning"
-                href="/specialized-care"
-                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=200&h=120&fit=crop"
-                description="Wills, trusts, and estate administration"
-                onClick={() => handleLinkClick("/specialized-care")}
-              />
-              <ProductItem
-                title="Real Estate Law"
-                href="/specialized-care"
-                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=200&h=120&fit=crop"
-                description="Property transactions and real estate disputes"
-                onClick={() => handleLinkClick("/specialized-care")}
+                title="Niche Products"
+                href="/niche-loans"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=200&h=120&fit=crop"
+                description="Jumbo, Investment, and Bank Statement loans"
+                onClick={() => handleLinkClick("/niche-loans")}
               />
             </div>
           </MenuItem>
@@ -158,51 +118,42 @@ function NavBar({ className }) {
           <MenuItem setActive={setActive} active={active} item={t.nav.aboutUs}>
             <div className="text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
-                title="Our Firm"
-                href="#home"
-                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=280&h=140&fit=crop"
-                description="Experienced legal representation with a dedicated team"
-                onClick={() => scrollToSection("#home")}
+                title="Our Company"
+                href="/about-us"
+                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=280&h=140&fit=crop"
+                description="Meet our experienced loan officers"
+                onClick={() => handleLinkClick("/about-us")}
               />
               <ProductItem
                 title="Client Reviews"
                 href="/reviews"
                 src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=280&h=140&fit=crop"
-                description="See what our clients say about their experience"
+                description="See what our homeowners say"
                 onClick={() => handleLinkClick("/reviews")}
               />
               <ProductItem
-                title="Location"
-                href="#map"
-                src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=280&h=140&fit=crop"
-                description="Visit us at our convenient location in the city"
-                onClick={() => scrollToSection("#map")}
-              />
-              <ProductItem
-                title="FAQ"
-                href="#faq"
-                src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=280&h=140&fit=crop"
-                description="Common questions about our services and policies"
-                onClick={() => scrollToSection("#faq")}
+                title="Resources"
+                href="/resources"
+                src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=280&h=140&fit=crop"
+                description="Mortgage guides and news"
+                onClick={() => handleLinkClick("/resources")}
               />
             </div>
           </MenuItem>
 
-          <a
-            href="/contact"
-            onClick={(e) => {
-              e.preventDefault();
-              handleLinkClick("/contact");
-            }}
+          <Link
+            to="/contact"
+            onClick={() => handleLinkClick("/contact")}
             className="cursor-pointer text-black hover:text-primary font-medium text-sm transition-colors duration-200"
           >
             {t.nav.contact}
-          </a>
+          </Link>
         </div>
 
-        {/* Desktop Language Switcher and Book Now Button - hidden on mobile */}
+        {/* Desktop Language & CTA */}
         <div className="hidden md:flex items-center ml-auto gap-3" style={{ transform: 'translateX(20px)' }}>
-          <div 
+          {/* Language Switcher (Optional) */}
+          <div
             ref={languageDropdownRef}
             className="relative"
             onMouseEnter={() => setIsLanguageDropdownOpen(true)}
@@ -216,7 +167,7 @@ function NavBar({ className }) {
               <ChevronDown className="w-4 h-4" />
             </button>
             {isLanguageDropdownOpen && (
-              <div 
+              <div
                 className="absolute top-full right-0 pt-1 bg-transparent"
                 onMouseEnter={() => setIsLanguageDropdownOpen(true)}
                 onMouseLeave={() => setIsLanguageDropdownOpen(false)}
@@ -254,11 +205,7 @@ function NavBar({ className }) {
             href="#appointment-form"
             onClick={(e) => {
               e.preventDefault();
-              if (window.location.pathname === '/') {
-                scrollToSection("#appointment-form");
-              } else {
-                window.location.href = '/#appointment-form';
-              }
+              scrollToSection("#appointment-form");
             }}
             className="bg-primary text-white px-4 py-1.5 rounded-lg font-semibold hover:bg-opacity-90 transition-colors whitespace-nowrap text-sm"
           >
@@ -266,7 +213,7 @@ function NavBar({ className }) {
           </a>
         </div>
 
-        {/* Mobile Burger Menu Button - positioned on the right */}
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-gray-800 hover:bg-gray-200 transition-colors ml-auto"
@@ -287,174 +234,35 @@ function NavBar({ className }) {
           isScrolled ? "top-[63px]" : "top-[100px]"
         )}>
           <div className="px-4 py-6 space-y-4">
-            {/* Services Section */}
+            {/* Navigation Links */}
             <div>
               <h3 className="text-lg font-semibold text-black mb-3">{t.nav.services}</h3>
               <div className="space-y-2">
-                <a
-                  href="/general-dentistry"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleMobileLinkClick(() => handleLinkClick("/general-dentistry"));
-                  }}
-                  className="block py-2 text-black hover:text-primary transition-colors"
-                >
-                  Business Law
-                </a>
-                <a
-                  href="/cosmetic-whitening"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleMobileLinkClick(() => handleLinkClick("/cosmetic-whitening"));
-                  }}
-                  className="block py-2 text-black hover:text-primary transition-colors"
-                >
-                  Personal Injury
-                </a>
-                <a
-                  href="/specialized-care"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleMobileLinkClick(() => handleLinkClick("/specialized-care"));
-                  }}
-                  className="block py-2 text-black hover:text-primary transition-colors"
-                >
-                  Criminal Defense
-                </a>
+                <Link to="/residential-loans" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-black hover:text-primary">Residential Loans</Link>
+                <Link to="/refinancing" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-black hover:text-primary">Refinancing</Link>
+                <Link to="/niche-loans" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-black hover:text-primary">Niche Loans</Link>
               </div>
             </div>
 
-            {/* About Section */}
             <div>
               <h3 className="text-lg font-semibold text-black mb-3">{t.nav.aboutUs}</h3>
               <div className="space-y-2">
-                <a
-                  href="#home"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleMobileLinkClick(() => scrollToSection("#home"));
-                  }}
-                  className="block py-2 text-black hover:text-primary transition-colors"
-                >
-                  Our Firm
-                </a>
-                <a
-                  href="/reviews"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleMobileLinkClick(() => handleLinkClick("/reviews"));
-                  }}
-                  className="block py-2 text-black hover:text-primary transition-colors"
-                >
-                  Client Reviews
-                </a>
-                <a
-                  href="#map"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleMobileLinkClick(() => scrollToSection("#map"));
-                  }}
-                  className="block py-2 text-black hover:text-primary transition-colors"
-                >
-                  Location
-                </a>
-                <a
-                  href="#faq"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleMobileLinkClick(() => scrollToSection("#faq"));
-                  }}
-                  className="block py-2 text-black hover:text-primary transition-colors"
-                >
-                  FAQ
-                </a>
+                <Link to="/about-us" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-black hover:text-primary">Our Company</Link>
+                <Link to="/reviews" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-black hover:text-primary">Client Reviews</Link>
+                <Link to="/resources" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-black hover:text-primary">Resources</Link>
               </div>
             </div>
 
-            {/* Locations Section */}
-            <div>
-              <h3 className="text-lg font-semibold text-black mb-3">{t.nav.locations}</h3>
-              <div className="space-y-2">
-                {config.LOCATIONS && config.LOCATIONS.length > 0 ? (
-                  config.LOCATIONS.map((location, index) => (
-                    <a
-                      key={index}
-                      href={`/locations/${location.slug}`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleMobileLinkClick(() => handleLinkClick(`/locations/${location.slug}`));
-                      }}
-                      className="block py-2 text-black hover:text-primary transition-colors"
-                    >
-                      {location.name}
-                    </a>
-                  ))
-                ) : (
-                  <div className="text-sm text-gray-600">No locations available</div>
-                )}
-              </div>
-            </div>
+            <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 font-semibold text-black hover:text-primary">{t.nav.contact}</Link>
 
-            {/* Contact Section */}
-            <div>
-              <h3 className="text-lg font-semibold text-black mb-3">{t.nav.contact}</h3>
-              <div className="space-y-2">
-                <a
-                  href="/contact"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleMobileLinkClick(() => handleLinkClick("/contact"));
-                  }}
-                  className="block py-2 text-black hover:text-primary transition-colors"
-                >
-                  Contact Us
-                </a>
-              </div>
-            </div>
-
-            {/* Mobile Language Switcher */}
-            <div className="pt-2">
-              <div className="space-y-2">
-                <button
-                  onClick={() => {
-                    setLanguage('en');
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className={cn(
-                    "flex items-center gap-2 w-full px-4 py-3 rounded-lg font-medium text-black hover:bg-gray-100 transition-colors border",
-                    language === 'en' ? "border-primary bg-primary/5" : "border-gray-200"
-                  )}
-                >
-                  <span>EN</span>
-                </button>
-                <button
-                  onClick={() => {
-                    setLanguage('es');
-                    setIsMobileMenuOpen(false);
-                }}
-                  className={cn(
-                    "flex items-center gap-2 w-full px-4 py-3 rounded-lg font-medium text-black hover:bg-gray-100 transition-colors border",
-                    language === 'es' ? "border-primary bg-primary/5" : "border-gray-200"
-                  )}
-                >
-                  <span>ES</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Mobile Book Now Button */}
+            {/* Mobile Book Now */}
             <div className="pt-4">
               <a
                 href="#appointment-form"
                 onClick={(e) => {
                   e.preventDefault();
-                  handleMobileLinkClick(() => {
-                    if (window.location.pathname === '/') {
-                      scrollToSection("#appointment-form");
-                    } else {
-                      window.location.href = '/#appointment-form';
-                    }
-                  });
+                  setIsMobileMenuOpen(false);
+                  scrollToSection("#appointment-form");
                 }}
                 className="block w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-opacity-90 transition-colors"
               >
@@ -465,7 +273,7 @@ function NavBar({ className }) {
         </div>
       )}
 
-      {/* Mobile Menu Backdrop */}
+      {/* Backdrop */}
       {isMobileMenuOpen && (
         <div
           className={cn(
